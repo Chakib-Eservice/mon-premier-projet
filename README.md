@@ -2,8 +2,20 @@
 
 Site vitrine de **Chakib E-Service** (Constantine) : services administratifs et numériques.
 
-Site statique en **un seul fichier** : `index.html` contient le HTML, le CSS (balise `<style>`), le JavaScript (balise `<script>`) et le favicon.
-Aucun fichier externe à oublier : le design s'affiche même si on ouvre `index.html` directement ou si on ne déploie que ce fichier (Netlify, GitHub Pages…).
+Site statique sans build : `index.html` contient le HTML, le CSS (balise `<style>`), le JavaScript (balise `<script>`) et le favicon.
+Les photos sont dans `images/`. Netlify publie la racine du dépôt (`netlify.toml`).
+
+Palette : **noir et bleu profond uniquement** (variables `--bg`, `--blue-*` en haut de la balise `<style>`).
+
+| Photo (`images/`)                    | Utilisée dans                      |
+|--------------------------------------|------------------------------------|
+| `facade-e-service-ali-mendjeli.jpg`  | Hero, galerie, image de partage    |
+| `espace-bureau-interieur.jpg`        | Hero (vignette), galerie           |
+| `vitrine-services.jpg`               | Section services, galerie          |
+| `boutique-e-service-entree.jpg`      | Galerie, bandeau contact, footer   |
+| `poste-de-travail.jpg`               | Galerie                            |
+
+Pour ajouter une photo : l'optimiser (≈1400 px, JPG qualité 80) et ajouter un bouton `.ph` dans la galerie.
 
 ## Liens officiels
 - WhatsApp : https://wa.me/213542522033
@@ -26,5 +38,4 @@ python3 -m http.server 8000
   - `url` → collez le lien de partage de la fiche (Google Maps → Partager, ex. `https://maps.app.goo.gl/...`) ; tous les boutons « Avis Google », « Google Maps » et la galerie l'utilisent.
   - `placeId` → (optionnel) active le lien direct « Laisser un avis ».
   - Mettez aussi ce lien dans `"hasMap"` du JSON-LD.
-- **Photos** : voir `images/README.md`.
 - Gardez exactement le même nom, adresse et téléphone sur le site, la fiche Google et les réseaux (cohérence NAP).
