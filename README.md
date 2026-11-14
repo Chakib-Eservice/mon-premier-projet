@@ -2,14 +2,8 @@
 
 Site vitrine de **Chakib E-Service** (Constantine) : services administratifs et numériques.
 
-Site statique, sans build ni dépendance : il suffit de déployer le dossier tel quel (Netlify, GitHub Pages…).
-
-```
-index.html            Page unique (header, hero, services, étapes, réseaux, CTA, footer)
-assets/css/style.css  Styles (tokens de couleurs en haut du fichier, sections numérotées)
-assets/js/main.js     Menu mobile, animations au scroll, effets au survol
-assets/img/           Favicon
-```
+Site statique en **un seul fichier** : `index.html` contient le HTML, le CSS (balise `<style>`), le JavaScript (balise `<script>`) et le favicon.
+Aucun fichier externe à oublier : le design s'affiche même si on ouvre `index.html` directement ou si on ne déploie que ce fichier (Netlify, GitHub Pages…).
 
 ## Liens officiels
 - WhatsApp : https://wa.me/213542522033
@@ -18,7 +12,7 @@ assets/img/           Favicon
 - Facebook : https://www.facebook.com/eservice.chakib
 
 ## Modifier
-- Couleurs : variables `--gold`, `--navy`, etc. dans `:root` (style.css).
+- Couleurs : variables dans `:root` en haut de la balise `<style>` : noir `--bg`, bleu profond `--navy` / `--blue`, accent rouge `--red`.
 - Messages WhatsApp pré-remplis : paramètre `?text=` de chaque lien `wa.me` dans index.html.
 
 ## Aperçu local
