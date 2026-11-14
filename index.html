@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chakib E-Service · Cybercafé &amp; services administratifs à Ali Mendjeli, Constantine</title>
-  <meta name="description" content="Chakib E-Service, cybercafé et services administratifs à Cosider, Nouvelle Ville Ali Mendjeli (Constantine) : dossiers visa, Campus France, Progres, CNRC, paiements en ligne, scan, impression et design. Noté 5,0 sur Google. WhatsApp : +213 542 52 20 33.">
-  <meta name="keywords" content="cybercafé Ali Mendjeli, services administratifs Constantine, dossier visa Constantine, Campus France Constantine, Progres, inscription BAC BEM, CNRC auto-entrepreneur, ANGEM, ANADE, impression Ali Mendjeli, Nouvelle Ville, Cosider, خدمات إلكترونية علي منجلي, ملفات الفيزا قسنطينة">
+  <meta name="description" content="Chakib E-Service, cybercafé, services numériques et administratifs et boutique de football à Cosider, Ali Mendjeli (El Khroub, Constantine) : dossiers visa, Campus France, Progres, CNRC, paiements en ligne, impression. Noté 5,0 sur Google. WhatsApp : +213 542 52 20 33.">
+  <meta name="keywords" content="cybercafé Ali Mendjeli, cybercafé El Khroub, boutique football Ali Mendjeli, équipements de football Constantine, services administratifs Constantine, dossier visa Constantine, Campus France Constantine, Progres, inscription BAC BEM, CNRC auto-entrepreneur, ANGEM, ANADE, impression Ali Mendjeli, Nouvelle Ville, Cosider, خدمات إلكترونية علي منجلي, ملفات الفيزا قسنطينة">
   <meta name="author" content="Chakib E-Service">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="alternate" hreflang="fr-DZ" href="https://chakibeservice.netlify.app/">
   <link rel="alternate" hreflang="x-default" href="https://chakibeservice.netlify.app/">
   <link rel="canonical" href="https://chakibeservice.netlify.app/">
   <meta name="geo.region" content="DZ-25">
-  <meta name="geo.placename" content="Ali Mendjeli, Constantine, Algérie">
+  <meta name="geo.placename" content="Ali Mendjeli, El Khroub, Constantine, Algérie">
   <meta name="theme-color" content="#03060d">
   <meta property="og:title" content="Chakib E-Service · Vos démarches simplifiées, professionnellement.">
   <meta property="og:description" content="Cybercafé et services administratifs à Ali Mendjeli, Constantine. Noté 5,0 sur Google. Écrivez-nous sur WhatsApp.">
@@ -314,6 +314,7 @@ address { font-style: normal; }
 .services-photo figcaption b { display: block; font-family: var(--font-display); font-size: 1.2rem; }
 .services-photo figcaption span { color: var(--muted); font-size: .9rem; }
 .services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.services > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 .svc { display: flex; flex-direction: column; padding: 26px; }
 .svc__icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 15px; color: var(--blue-300); background: rgba(47,107,255,.12); border: 1px solid rgba(91,140,255,.3); box-shadow: 0 0 30px -8px var(--glow); transition: transform .5s var(--ease), background .5s, color .5s; }
 .svc__icon svg { width: 25px; height: 25px; }
@@ -675,7 +676,8 @@ a.gbp-line:hover { color: var(--blue-300); }
     {
       "@type": [
         "LocalBusiness",
-        "InternetCafe"
+        "InternetCafe",
+        "SportingGoodsStore"
       ],
       "@id": "https://chakibeservice.netlify.app/#business",
       "name": "Chakib E-Service",
@@ -684,9 +686,9 @@ a.gbp-line:hover { color: var(--blue-300); }
         "إي سيرفيس علي منجلي"
       ],
       "slogan": "Rapide · Fiable · Professionnel",
-      "description": "Cybercafé et services administratifs & numériques à Ali Mendjeli, Constantine : dossiers visa, Campus France, Progres, BAC/BEM, CNRC, ANGEM, ANADE, paiements en ligne, scan, impression et design.",
-      "keywords": "Cybercafé, Services administratifs et numériques, Dossiers visa, Campus France, Progres, CNRC, Impression, Ali Mendjeli, Constantine",
-      "url": "https://chakibeservice.netlify.app",
+      "description": "Cybercafé, services numériques et administratifs, et boutique d'équipements de football à Cosider, Ali Mendjeli (El Khroub, Constantine) : dossiers visa, Campus France, Progres, BAC/BEM, CNRC, ANGEM, ANADE, paiements en ligne, scan, impression et design.",
+      "keywords": "Cybercafé, Services numériques et administratifs, Boutique football, Équipements de football, Dossiers visa, Campus France, Progres, CNRC, Impression, Ali Mendjeli, El Khroub, Constantine",
+      "url": "https://chakibeservice.netlify.app/",
       "telephone": "+213542522033",
       "logo": {
         "@type": "ImageObject",
@@ -701,8 +703,8 @@ a.gbp-line:hover { color: var(--blue-300); }
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Cosider, Nouvelle Ville",
-        "addressLocality": "Ali Mendjeli",
+        "streetAddress": "Cosider, Ali Mendjeli",
+        "addressLocality": "El Khroub",
         "addressRegion": "Constantine",
         "addressCountry": "DZ"
       },
@@ -711,6 +713,10 @@ a.gbp-line:hover { color: var(--blue-300); }
         {
           "@type": "Place",
           "name": "Ali Mendjeli"
+        },
+        {
+          "@type": "City",
+          "name": "El Khroub"
         },
         {
           "@type": "City",
@@ -860,6 +866,13 @@ a.gbp-line:hover { color: var(--blue-300); }
               "@type": "Service",
               "name": "Formatage Windows et installation de logiciels"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Équipements et articles de football"
+            }
           }
         ]
       },
@@ -910,7 +923,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           "name": "Où se trouve Chakib E-Service ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Notre bureau est situé à Cosider, Nouvelle Ville, Ali Mendjeli (Constantine). Vous pouvez venir sur place ou ouvrir l'itinéraire Google Maps depuis ce site."
+            "text": "Notre bureau est situé à Cosider, Ali Mendjeli, El Khroub (Constantine). Vous pouvez venir sur place ou ouvrir l'itinéraire Google Maps depuis ce site."
           }
         },
         {
@@ -926,7 +939,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           "name": "Quels services proposez-vous ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dossiers visa et rendez-vous consulat, Campus France, démarches étudiantes (Progres, BAC/BEM, bourse, transport), CNRC, auto-entrepreneur, NIF, CNAS, ANGEM, ANADE, paiements en ligne (Sonelgaz, Algérie Poste), actes d'état civil en ligne, scan, impression, photocopie, fax, design et services informatiques."
+            "text": "Dossiers visa et rendez-vous consulat, Campus France, démarches étudiantes (Progres, BAC/BEM, bourse, transport), CNRC, auto-entrepreneur, NIF, CNAS, ANGEM, ANADE, paiements en ligne (Sonelgaz, Algérie Poste), actes d'état civil en ligne, scan, impression, photocopie, fax, design et services informatiques, ainsi qu'une boutique d'équipements de football."
           }
         },
         {
@@ -1056,7 +1069,7 @@ a.gbp-line:hover { color: var(--blue-300); }
       </div>
 
       <div class="marquee" aria-hidden="true">
-        <div class="marquee__track"><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span></div>
+        <div class="marquee__track"><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span><span>Articles de football</span><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span><span>Articles de football</span></div>
       </div>
     </section>
 
@@ -1143,6 +1156,12 @@ a.gbp-line:hover { color: var(--blue-300); }
               <h3>Impression &amp; design</h3>
               <ul class="svc__list"><li>Création graphique &amp; impression</li><li>Mise en page de mémoires</li><li>Formatage Windows &amp; logiciels</li></ul>
               <a class="svc__cta" href="https://wa.me/213542522033?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20service%20d%27impression%20%2F%20design%20%2F%20informatique." target="_blank" rel="noopener">Demander sur WhatsApp<svg><use href="#i-arrow"/></svg></a>
+            </article>
+            <article class="svc glass glow-card reveal">
+              <div class="svc__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="m12 7.6 3.6 2.6-1.4 4.2H9.8l-1.4-4.2L12 7.6ZM12 3v4.6M15.6 10.2l4.6-1.5M14.2 14.4l2.8 3.9M9.8 14.4 7 18.3M8.4 10.2 3.8 8.7"/></svg></div>
+              <h3>Boutique football</h3>
+              <ul class="svc__list"><li>Équipements de football</li><li>Articles &amp; tenues de foot</li><li>Disponibilités et prix sur WhatsApp</li></ul>
+              <a class="svc__cta" href="https://wa.me/213542522033?text=Bonjour%2C%20je%20cherche%20des%20%C3%A9quipements%20de%20football." target="_blank" rel="noopener">Demander sur WhatsApp<svg><use href="#i-arrow"/></svg></a>
             </article>
           </div>
         </div>
@@ -1241,7 +1260,7 @@ a.gbp-line:hover { color: var(--blue-300); }
               <span class="gbp-card__logo"><svg><use href="#i-pin"/></svg></span>
               <div><h3>Nous trouver</h3><p>Chakib E-Service · Cybercafé &amp; services administratifs</p></div>
             </div>
-            <address class="gbp-line"><svg><use href="#i-pin"/></svg><span>Cosider, Nouvelle Ville<br>Ali Mendjeli, Constantine</span></address>
+            <address class="gbp-line"><svg><use href="#i-pin"/></svg><span>Cosider, Ali Mendjeli<br>El Khroub, Constantine</span></address>
             <a class="gbp-line" href="https://wa.me/213542522033" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg><span dir="ltr">+213 542 52 20 33</span></a>
             <div class="gbp-actions">
               <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-route"/></svg><span>Itinéraire</span></a>
@@ -1267,7 +1286,7 @@ a.gbp-line:hover { color: var(--blue-300); }
         <div class="faq" data-stagger>
           <details class="faq__item glass reveal" open>
             <summary><span>Où se trouve Chakib E-Service ?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__a"><p>Notre bureau est situé à <strong>Cosider, Nouvelle Ville, Ali Mendjeli (Constantine)</strong>. Venez sur place ou <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener">ouvrez l'itinéraire Google Maps</a>.</p></div>
+            <div class="faq__a"><p>Notre bureau est situé à <strong>Cosider, Ali Mendjeli, El Khroub (Constantine)</strong>. Venez sur place ou <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener">ouvrez l'itinéraire Google Maps</a>.</p></div>
           </details>
           <details class="faq__item glass reveal">
             <summary><span>Peut-on faire ses démarches à distance ?</span><i aria-hidden="true"></i></summary>
@@ -1275,7 +1294,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           </details>
           <details class="faq__item glass reveal">
             <summary><span>Quels services proposez-vous ?</span><i aria-hidden="true"></i></summary>
-            <div class="faq__a"><p>Dossiers visa et rendez-vous consulat, Campus France, démarches étudiantes (Progres, BAC/BEM, bourse, transport), CNRC, auto-entrepreneur, NIF, CNAS, ANGEM, ANADE, paiements en ligne (Sonelgaz, Algérie Poste), actes d'état civil en ligne, scan, impression, photocopie, fax, design et services informatiques. <a href="#services">Voir tous les services</a>.</p></div>
+            <div class="faq__a"><p>Dossiers visa et rendez-vous consulat, Campus France, démarches étudiantes (Progres, BAC/BEM, bourse, transport), CNRC, auto-entrepreneur, NIF, CNAS, ANGEM, ANADE, paiements en ligne (Sonelgaz, Algérie Poste), actes d'état civil en ligne, scan, impression, photocopie, fax, design et services informatiques, ainsi qu'une boutique d'équipements de football. <a href="#services">Voir tous les services</a>.</p></div>
           </details>
           <details class="faq__item glass reveal">
             <summary><span>Aidez-vous les étudiants pour Progres, le BAC et les bourses ?</span><i aria-hidden="true"></i></summary>
@@ -1342,7 +1361,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           <div class="cta-band__copy">
             <h2>Un dossier à lancer&nbsp;? <span class="text-gradient">Écrivez-nous maintenant.</span></h2>
             <p lang="ar" dir="rtl" class="cta-band__ar">راسلنا الآن على الواتساب</p>
-            <p class="cta-band__info"><span dir="ltr">+213 542 52 20 33</span> · Cosider, Nouvelle Ville, Ali Mendjeli</p>
+            <p class="cta-band__info"><span dir="ltr">+213 542 52 20 33</span> · Cosider, Ali Mendjeli, El Khroub</p>
           </div>
           <div class="cta-band__actions">
             <a class="btn btn--primary btn--lg btn--pulse" href="https://wa.me/213542522033?text=Bonjour%20Chakib%20E-Service%2C%20je%20souhaite%20lancer%20un%20dossier." target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-whatsapp"/></svg><span>Ouvrir WhatsApp</span></a>
@@ -1379,6 +1398,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           <li><a href="#services">Étudiants &amp; Progres</a></li>
           <li><a href="#services">CNRC, ANGEM, ANADE</a></li>
           <li><a href="#services">Scan, impression &amp; design</a></li>
+          <li><a href="#services">Boutique football</a></li>
         </ul>
       </div>
       <div>
@@ -1386,7 +1406,7 @@ a.gbp-line:hover { color: var(--blue-300); }
         <ul>
           <li><a href="tel:+213542522033" dir="ltr">+213 542 52 20 33</a></li>
           <li><a href="https://wa.me/213542522033" target="_blank" rel="noopener">WhatsApp direct</a></li>
-          <li><address>Cosider, Nouvelle Ville<br>Ali Mendjeli, Constantine</address></li>
+          <li><address>Cosider, Ali Mendjeli<br>El Khroub, Constantine</address></li>
           <li><a href="#avis">★ 5,0 sur Google</a></li>
           <li><a href="#faq">Questions fréquentes</a></li>
         </ul>
@@ -1395,7 +1415,7 @@ a.gbp-line:hover { color: var(--blue-300); }
         <h4>Visitez-nous</h4>
         <a class="visit" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener">
           <div class="visit__img"><img src="images/boutique-e-service-entree.jpg" alt="Entrée de Chakib E-Service à Ali Mendjeli" width="1050" height="1400" loading="lazy"></div>
-          <div class="visit__body"><b>Chakib E-Service</b><span>Cosider, Nouvelle Ville, Ali Mendjeli</span><em><svg><use href="#i-route"/></svg>Itinéraire Google Maps</em></div>
+          <div class="visit__body"><b>Chakib E-Service</b><span>Cosider, Ali Mendjeli, El Khroub</span><em><svg><use href="#i-route"/></svg>Itinéraire Google Maps</em></div>
         </a>
       </div>
     </div>
