@@ -532,6 +532,11 @@ a.gbp-line:hover { color: var(--blue-300); }
 .visit__body em svg { width: 16px; height: 16px; }
 .footer__bottom { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--border); font-size: .86rem; color: var(--muted); }
 .to-top:hover { color: var(--blue-300); }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.footer__legal a { position: relative; transition: color .3s; }
+.footer__legal a:hover { color: var(--blue-300); }
+.footer__legal a:first-child::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: var(--blue-400); transform: scaleX(0); transform-origin: 0 50%; transition: transform .4s var(--ease); }
+.footer__legal a:first-child:hover::after { transform: scaleX(1); }
 
 /* 15. FAB + lightbox --------------------------------------- */
 .fab { position: fixed; right: 22px; bottom: 22px; z-index: 90; display: grid; justify-items: end; gap: 12px; pointer-events: none; }
@@ -1507,7 +1512,7 @@ a.gbp-line:hover { color: var(--blue-300); }
     </div>
     <div class="container footer__bottom">
       <p>© <span id="year">2026</span> Chakib E-Service · Ali Mendjeli, Constantine</p>
-      <a href="#top" class="to-top">Haut de page ↑</a>
+      <nav class="footer__legal" aria-label="Informations légales"><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="#top" class="to-top">Haut de page ↑</a></nav>
     </div>
   </footer>
 
