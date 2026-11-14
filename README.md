@@ -46,3 +46,9 @@ python3 -m http.server 8000
 - **Fichiers** : `robots.txt` et `sitemap.xml` (avec les photos). Après la mise en ligne, soumettez `https://chakibeservice.netlify.app/sitemap.xml` dans Google Search Console.
 - **Avis clients** : la note 5,0 est affichée sur la page. Pour afficher de vrais avis, copiez-les depuis la fiche Google dans la liste `REVIEWS` (script en bas de `index.html`) : `{ name: 'Prénom N.', date: 'il y a 2 semaines', text: '…' }`. La note n'est volontairement pas balisée en `aggregateRating` (Google ignore et peut pénaliser les avis auto-déclarés d'une entreprise sur son propre site).
 - **Horaires / coordonnées GPS** : non renseignés faute d'information. À ajouter dans le JSON-LD (`openingHoursSpecification`, `geo`) dès qu'ils sont connus, à l'identique de la fiche Google.
+
+## Fond animé « carte numérique »
+Généré en JavaScript (fin du `<script>` dans `index.html`, bloc *Digital city-map background*) sous forme d'un SVG en ligne : rues, îlots, axes principaux lumineux, nœuds et hubs pulsants, et quelques « véhicules » lumineux qui circulent sur les routes.
+- La carte est dessinée une seule fois ; seuls la position du calque (dérive lente + léger parallaxe souris) et les véhicules bougent, via `transform`/`opacity` (composités par le GPU).
+- Moins d'éléments sur mobile, pause quand l'onglet est caché, image fixe si l'utilisateur a activé « réduire les animations ».
+- Couleurs : bleu profond et noir uniquement. Réglages : `step` (taille des îlots), nombre de véhicules (`n`), opacités dans le gabarit SVG.
