@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chakib E-Service · Vos démarches simplifiées à Constantine</title>
-  <meta name="description" content="Chakib E-Service (Constantine) : Campus France, CNRC, auto-entrepreneur, CV ATS, bourses, import-export, rendez-vous visa, paiements en ligne et services informatiques. Contact direct sur WhatsApp.">
+  <title>Chakib E-Service · Cybercafé &amp; services administratifs à Ali Mendjeli, Constantine</title>
+  <meta name="description" content="Chakib E-Service, cybercafé et services administratifs à Cosider, Nouvelle Ville Ali Mendjeli (Constantine) : Campus France, CNRC, auto-entrepreneur, CV ATS, bourses, visa, paiements en ligne. Noté 5,0 sur Google. WhatsApp : +213 542 52 20 33.">
+  <link rel="canonical" href="https://chakibeservice.netlify.app/">
+  <meta name="geo.region" content="DZ-25">
+  <meta name="geo.placename" content="Ali Mendjeli, Constantine">
   <meta name="theme-color" content="#04060c">
   <meta property="og:title" content="Chakib E-Service · Vos démarches simplifiées, professionnellement.">
-  <meta property="og:description" content="Services administratifs et numériques à Constantine. Écrivez-nous sur WhatsApp.">
+  <meta property="og:description" content="Cybercafé et services administratifs à Ali Mendjeli, Constantine. Noté 5,0 sur Google. Écrivez-nous sur WhatsApp.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chakibeservice.netlify.app/">
+  <meta property="og:site_name" content="Chakib E-Service">
+  <meta property="og:locale" content="fr_DZ">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ff5a6e%22/%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23ef233c%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c1121f%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2245%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%3EE%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,6 +385,83 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .cta-band__actions { display: grid; justify-items: center; gap: 18px; flex: none; }
 .cta-band__social { display: flex; gap: 10px; }
 
+/* 11b. Google Business: rating, map, gallery --------------- */
+.stars { display: inline-flex; gap: 2px; color: var(--red); filter: drop-shadow(0 0 6px rgba(239,35,60,.55)); }
+.stars svg { width: 16px; height: 16px; }
+.soc-icon--g:hover { background: #fff; box-shadow: 0 10px 28px -6px rgba(66,133,244,.7); }
+
+.hero__rating {
+  display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 26px;
+  padding: 10px 16px; border-radius: 14px; font-size: .9rem; color: var(--muted);
+  background: rgba(255,255,255,.04); border: 1px solid var(--border);
+  transition: border-color .35s, background .35s, transform .35s var(--ease);
+}
+.hero__rating:hover { border-color: rgba(239,35,60,.45); background: rgba(239,35,60,.06); transform: translateY(-2px); }
+.hero__rating b { font-family: var(--font-display); font-size: 1.1rem; color: var(--text); }
+.hero__rating-g { width: 20px; height: 20px; }
+.hero__rating:hover span { color: var(--text); }
+
+.gbp { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 22px; align-items: stretch; }
+.gbp-card { padding: 32px; display: flex; flex-direction: column; gap: 22px; }
+.gbp-card__head { display: flex; align-items: center; gap: 14px; }
+.gbp-card__g { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: #fff; box-shadow: 0 10px 28px -10px rgba(66,133,244,.7); }
+.gbp-card__g svg { width: 26px; height: 26px; }
+.gbp-card h3 { font-size: 1.3rem; }
+.gbp-card__head p { color: var(--muted); font-size: .9rem; }
+.gbp-score { display: flex; align-items: center; gap: 18px; padding: 20px 22px; border-radius: var(--radius-sm); background: rgba(239,35,60,.07); border: 1px solid rgba(239,35,60,.25); }
+.gbp-score__num { font-family: var(--font-display); font-weight: 800; font-size: 3.4rem; line-height: 1; background: linear-gradient(180deg, #fff, #ffb3bc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gbp-score .stars svg { width: 22px; height: 22px; }
+.gbp-score p { margin-top: 6px; color: var(--muted); font-size: .88rem; }
+.gbp-address { display: flex; gap: 12px; font-style: normal; color: var(--text); line-height: 1.5; }
+.gbp-address svg, .gbp-phone svg { flex: none; width: 22px; height: 22px; color: var(--blue-2); }
+.gbp-phone { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; margin-top: -8px; transition: color .3s; }
+.gbp-phone svg { color: var(--wa); }
+.gbp-phone:hover { color: var(--red-2); }
+.gbp-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+.gbp-actions .btn { padding: 0 18px; }
+
+.gbp-map { position: relative; overflow: hidden; min-height: 420px; padding: 0; }
+.gbp-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: invert(.9) hue-rotate(185deg) saturate(.7) brightness(.95) contrast(.95); }
+.gbp-map::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--border), inset 0 -80px 80px -40px rgba(4,6,12,.7); }
+.gbp-map__chip { position: absolute; z-index: 1; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; font-weight: 700; font-size: .88rem; color: #fff; background: rgba(4,6,12,.8); border: 1px solid var(--border-strong); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background .3s, border-color .3s, transform .35s var(--ease); }
+.gbp-map__chip svg { width: 18px; height: 18px; color: var(--red-2); }
+.gbp-map__chip:hover { background: var(--red); border-color: transparent; transform: translateY(-2px); }
+.gbp-map__chip:hover svg { color: #fff; }
+
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 16px; }
+.ph { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); background: radial-gradient(120% 90% at 85% 0%, rgba(239,35,60,.22), transparent 55%), radial-gradient(120% 100% at 0% 100%, rgba(47,107,255,.3), transparent 60%), var(--bg-2); }
+.ph--lg { grid-column: span 2; grid-row: span 2; }
+.ph--wide { grid-column: 1 / -1; }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.ph:hover img { transform: scale(1.06); }
+.ph::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 45%, rgba(4,6,12,.85)); }
+.ph figcaption { position: absolute; z-index: 1; left: 16px; right: 16px; bottom: 14px; font-weight: 700; font-size: .95rem; }
+.ph--lg figcaption { font-size: 1.15rem; left: 22px; bottom: 20px; }
+.ph__fallback { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 8px; color: rgba(255,255,255,.4); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.ph__fallback svg { width: 38px; height: 38px; color: rgba(255,255,255,.55); }
+.ph--lg .ph__fallback svg { width: 56px; height: 56px; }
+.ph:not(.is-empty) .ph__fallback { visibility: hidden; }
+.gallery__more { display: flex; justify-content: center; margin-top: 32px; }
+.footer__addr { font-style: normal; }
+
+@media (max-width: 960px) {
+  .gbp { grid-template-columns: minmax(0, 1fr); }
+  .gbp-map { min-height: 340px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
+}
+@media (max-width: 600px) {
+  .gbp-card { padding: 24px; }
+  .gbp-score { gap: 14px; padding: 16px; }
+  .gbp-score__num { font-size: 2.8rem; }
+  .gbp-actions .btn { flex: 1 1 100%; }
+  .gbp-map { min-height: 300px; }
+  .gallery { grid-auto-rows: 150px; gap: 12px; }
+  .ph--lg { grid-row: span 2; }
+  .ph figcaption { font-size: .85rem; left: 12px; bottom: 10px; }
+  .ph:not(.ph--lg):not(.ph--wide) .ph__fallback { padding-bottom: 34px; }
+  .ph:not(.ph--lg):not(.ph--wide) .ph__fallback span { display: none; }
+}
+
 /* 12. Footer ----------------------------------------------- */
 .footer { padding: 72px 0 28px; border-top: 1px solid var(--border); background: linear-gradient(180deg, transparent, rgba(11,42,107,.3)); }
 .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
@@ -490,17 +573,54 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["LocalBusiness", "InternetCafe"],
+    "@id": "https://chakibeservice.netlify.app/#business",
     "name": "Chakib E-Service",
-    "description": "Services administratifs et numériques à Constantine.",
-    "areaServed": "Algérie",
-    "address": { "@type": "PostalAddress", "addressLocality": "Constantine", "addressCountry": "DZ" },
+    "description": "Cybercafé et services administratifs & numériques à Ali Mendjeli, Constantine : Campus France, CNRC, auto-entrepreneur, CV ATS, bourses, rendez-vous visa, paiements en ligne et informatique.",
+    "keywords": "Cybercafé, Services administratifs et numériques, Campus France, CNRC, Ali Mendjeli, Constantine",
+    "url": "https://chakibeservice.netlify.app",
     "telephone": "+213542522033",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cosider, Nouvelle Ville",
+      "addressLocality": "Ali Mendjeli",
+      "addressRegion": "Constantine",
+      "addressCountry": "DZ"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine",
+    "areaServed": [
+      { "@type": "Place", "name": "Ali Mendjeli" },
+      { "@type": "City", "name": "Constantine" }
+    ],
+    "knowsLanguage": ["fr", "ar"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+213542522033",
+      "contactType": "customer service",
+      "availableLanguage": ["French", "Arabic"],
+      "url": "https://wa.me/213542522033"
+    },
     "sameAs": [
       "https://www.instagram.com/chakib_e.service/",
       "https://www.tiktok.com/@chakib_e.service",
       "https://www.facebook.com/eservice.chakib"
-    ]
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services Chakib E-Service",
+      "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Candidature Campus France" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CV format ATS" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dossiers de bourses (USA, Arabie saoudite, Italie)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Registre de commerce CNRC" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carte auto-entrepreneur" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NIF et CNAS" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Démarches import-export (Algex, domiciliation)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rendez-vous visa et consulat" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paiement de factures en ligne (Sonelgaz, Algérie Poste)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formatage Windows et installation de logiciels" } }
+      ]
+    }
   }
   </script>
 </head>
@@ -512,6 +632,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03a10.7 10.7 0 0 1-4.2-.97c-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75a7.64 7.64 0 0 1-1.35 3.94 7.45 7.45 0 0 1-5.92 3.21 7.29 7.29 0 0 1-4.08-1.03 7.54 7.54 0 0 1-3.65-5.71c-.02-.5-.03-1-.01-1.49a7.53 7.53 0 0 1 8.73-6.68c.02 1.48-.04 2.96-.04 4.44a3.43 3.43 0 0 0-4.38 2.12c-.21.51-.15 1.07-.14 1.61a3.41 3.41 0 0 0 3.52 2.88 3.37 3.37 0 0 0 2.78-1.62c.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6Z"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.45a5.5 5.5 0 0 1-2.4 3.62v3h3.88c2.27-2.09 3.57-5.17 3.57-8.81Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.94-2.9l-3.88-3.02c-1.07.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.72-4.95H1.27v3.11A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.28 14.28a7.2 7.2 0 0 1 0-4.56V6.61H1.27a12 12 0 0 0 0 10.78l4.01-3.11Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.61 4.59 1.8l3.44-3.44A11.97 11.97 0 0 0 12 0 12 12 0 0 0 1.27 6.61l4.01 3.11C6.22 6.88 8.87 4.77 12 4.77Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Zm0-8.6a2.9 2.9 0 1 0 0-5.8 2.9 2.9 0 0 0 0 5.8Z"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m3 11 18-8-8 18-2-8-8-2Z"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4V8Zm8 8.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   </svg>
 
@@ -529,11 +654,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
         <a href="#services">Services</a>
         <a href="#process">Comment ça marche</a>
         <a href="#social">Réseaux</a>
+        <a href="#avis">Avis Google</a>
         <a href="#contact">Contact</a>
         <div class="nav__social">
           <a class="soc-icon soc-icon--ig" href="https://www.instagram.com/chakib_e.service/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
           <a class="soc-icon soc-icon--tt" href="https://www.tiktok.com/@chakib_e.service" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a>
           <a class="soc-icon soc-icon--fb" href="https://www.facebook.com/eservice.chakib" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+          <a class="soc-icon soc-icon--g" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp target="_blank" rel="noopener" aria-label="Google Maps"><svg><use href="#i-google"/></svg></a>
         </div>
       </nav>
 
@@ -554,7 +681,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow reveal"><span class="dot"></span>Constantine · Services administratifs &amp; numériques</p>
+          <p class="eyebrow reveal"><span class="dot"></span>Ali Mendjeli, Constantine · Cybercafé &amp; services administratifs</p>
           <h1 class="hero__title reveal" style="--d:80ms">
             Vos démarches simplifiées,<br><span class="text-gradient">professionnellement.</span>
           </h1>
@@ -568,6 +695,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
             </a>
             <a class="btn btn--ghost btn--lg" href="#services"><span>Voir les services</span><svg class="btn__icon"><use href="#i-arrow"/></svg></a>
           </div>
+          <a class="hero__rating reveal" style="--d:300ms" href="#avis">
+            <svg class="hero__rating-g"><use href="#i-google"/></svg>
+            <b>5.0</b><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <span>sur Google · Voir les avis</span>
+          </a>
           <div class="hero__social reveal" style="--d:320ms">
             <span class="hero__social-label">Suivez-nous</span>
             <a class="soc-pill soc-pill--ig" href="https://www.instagram.com/chakib_e.service/" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg>Instagram</a>
@@ -597,7 +729,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
           </div>
           <div class="glass float-chip float-chip--loc">
             <span class="pin"></span>
-            <div><b>Constantine</b><small>Dossiers dans toute l'Algérie</small></div>
+            <div><b>Ali Mendjeli</b><small>Cosider, Nouvelle Ville</small></div>
           </div>
         </div>
       </div>
@@ -718,6 +850,100 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
       </div>
     </section>
 
+    <!-- ===== Google Business: rating, map, directions ===== -->
+    <section class="section" id="avis">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="dot"></span>Avis Google</p>
+          <h2>Noté <span class="text-gradient">5,0</span> sur Google</h2>
+          <p>Lisez les avis de nos clients, laissez le vôtre, ou trouvez-nous sur Google Maps à Ali Mendjeli.</p>
+        </header>
+
+        <div class="gbp">
+          <div class="gbp-card glass reveal">
+            <div class="gbp-card__head">
+              <span class="gbp-card__g"><svg><use href="#i-google"/></svg></span>
+              <div>
+                <h3>Chakib E-Service</h3>
+                <p>Cybercafé · Services administratifs &amp; numériques</p>
+              </div>
+            </div>
+
+            <div class="gbp-score">
+              <span class="gbp-score__num">5.0</span>
+              <div>
+                <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+                <p>Note moyenne sur Google</p>
+              </div>
+            </div>
+
+            <address class="gbp-address">
+              <svg><use href="#i-pin"/></svg>
+              <span>Cosider, Nouvelle Ville<br>Ali Mendjeli, Constantine</span>
+            </address>
+            <a class="gbp-phone" href="https://wa.me/213542522033" target="_blank" rel="noopener" dir="ltr"><svg><use href="#i-whatsapp"/></svg>+213 542 52 20 33</a>
+
+            <div class="gbp-actions">
+              <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-star"/></svg><span>Voir nos avis Google</span></a>
+              <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp-review target="_blank" rel="noopener"><span>Laisser un avis</span></a>
+              <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-route"/></svg><span>Itinéraire</span></a>
+            </div>
+          </div>
+
+          <div class="gbp-map glass reveal" style="--d:100ms">
+            <iframe title="Carte Google Maps : Chakib E-Service, Ali Mendjeli, Constantine" src="https://www.google.com/maps?q=Chakib%20E-Service%2C%20Cosider%2C%20Ali%20Mendjeli%2C%20Constantine&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <a class="gbp-map__chip" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Ouvrir dans Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery (drop photos into /images, see images/README.md) ===== -->
+    <section class="section section--alt" id="galerie">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="dot"></span>Galerie</p>
+          <h2>Notre espace à Ali Mendjeli</h2>
+          <p>Le local, l'accueil et nos services en images. Encore plus de photos sur notre fiche Google.</p>
+        </header>
+        <div class="gallery">
+          <figure class="ph ph--lg reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/local.jpg" alt="Façade de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli" loading="lazy" decoding="async">
+            <figcaption>Notre local · Cosider, Ali Mendjeli</figcaption>
+          </figure>
+          <figure class="ph  reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/accueil.jpg" alt="Accueil et conseil chez Chakib E-Service" loading="lazy" decoding="async">
+            <figcaption>Accueil &amp; conseil</figcaption>
+          </figure>
+          <figure class="ph  reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/cybercafe.jpg" alt="Espace cybercafé de Chakib E-Service à Ali Mendjeli" loading="lazy" decoding="async">
+            <figcaption>Espace cybercafé</figcaption>
+          </figure>
+          <figure class="ph  reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/etudiants.jpg" alt="Préparation de dossiers Campus France et bourses" loading="lazy" decoding="async">
+            <figcaption>Dossiers étudiants</figcaption>
+          </figure>
+          <figure class="ph  reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/demarches.jpg" alt="Démarches administratives : CNRC, NIF, CNAS" loading="lazy" decoding="async">
+            <figcaption>Démarches administratives</figcaption>
+          </figure>
+          <figure class="ph ph--wide reveal">
+            <div class="ph__fallback" aria-hidden="true"><svg><use href="#i-camera"/></svg><span>Photo à venir</span></div>
+            <img src="images/informatique.jpg" alt="Service informatique : formatage Windows et installation de logiciels" loading="lazy" decoding="async">
+            <figcaption>Service informatique</figcaption>
+          </figure>
+        </div>
+        <div class="gallery__more reveal">
+          <a class="btn btn--ghost btn--lg" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-google"/></svg><span>Voir toutes les photos sur Google</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Social ===== -->
     <section class="section" id="social">
       <div class="container">
@@ -772,7 +998,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
           <div class="cta-band__copy">
             <h2>Un dossier à lancer&nbsp;? <span class="text-gradient">Écrivez-nous maintenant.</span></h2>
             <p lang="ar" dir="rtl" class="cta-band__ar">راسلنا الآن على الواتساب</p>
-            <p class="cta-band__phone" dir="ltr">+213 542 52 20 33 · Constantine</p>
+            <p class="cta-band__phone"><span dir="ltr">+213 542 52 20 33</span> · Cosider, Nouvelle Ville, Ali Mendjeli</p>
           </div>
           <div class="cta-band__actions">
             <a class="btn btn--primary btn--lg btn--pulse" href="https://wa.me/213542522033?text=Bonjour%20Chakib%20E-Service%2C%20je%20souhaite%20lancer%20un%20dossier." target="_blank" rel="noopener">
@@ -794,7 +1020,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     <div class="container footer__grid">
       <div class="footer__brand">
         <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">E</span><span class="brand__text">Chakib<b>E-Service</b></span></a>
-        <p>Vos démarches simplifiées, professionnellement. Services administratifs et numériques à Constantine.</p>
+        <p>Vos démarches simplifiées, professionnellement. Cybercafé et services administratifs &amp; numériques à Ali Mendjeli, Constantine.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -809,7 +1035,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
         <h4>Contact</h4>
         <ul>
           <li><a href="https://wa.me/213542522033" target="_blank" rel="noopener" dir="ltr">+213 542 52 20 33</a></li>
-          <li>Constantine, Algérie</li>
+          <li><address class="footer__addr">Cosider, Nouvelle Ville<br>Ali Mendjeli, Constantine</address></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener">Itinéraire Google Maps →</a></li>
+          <li><a href="#avis">★ 5,0 sur Google</a></li>
         </ul>
       </div>
       <div>
@@ -819,11 +1047,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
           <a class="soc-icon soc-icon--tt" href="https://www.tiktok.com/@chakib_e.service" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a>
           <a class="soc-icon soc-icon--fb" href="https://www.facebook.com/eservice.chakib" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
           <a class="soc-icon soc-icon--wa" href="https://wa.me/213542522033" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+          <a class="soc-icon soc-icon--g" href="https://www.google.com/maps/search/?api=1&amp;query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine" data-gbp target="_blank" rel="noopener" aria-label="Google Maps"><svg><use href="#i-google"/></svg></a>
         </div>
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>© <span id="year">2026</span> Chakib E-Service · Constantine</p>
+      <p>© <span id="year">2026</span> Chakib E-Service · Ali Mendjeli, Constantine</p>
       <a href="#top" class="to-top">Haut de page ↑</a>
     </div>
   </footer>
@@ -920,6 +1149,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
       zone.addEventListener('pointerleave', () => { tilt.style.transform = ''; });
     }
   }
+
+  /* Google Business Profile links: edit these two values only.
+     url     -> your profile's share link (Google Maps > Share), e.g. https://maps.app.goo.gl/xxxx
+     placeId -> optional; enables the direct "write a review" link */
+  const GBP = {
+    url: 'https://www.google.com/maps/search/?api=1&query=Chakib%20E-Service%20Ali%20Mendjeli%20Constantine',
+    placeId: ''
+  };
+  const reviewUrl = GBP.placeId ? `https://search.google.com/local/writereview?placeid=${GBP.placeId}` : GBP.url;
+  $$('[data-gbp]').forEach((a) => { a.href = GBP.url; });
+  $$('[data-gbp-review]').forEach((a) => { a.href = reviewUrl; });
+
+  /* Gallery: show a styled placeholder until a real photo exists in /images */
+  $$('.ph img').forEach((img) => {
+    const empty = () => { img.closest('.ph').classList.add('is-empty'); img.remove(); };
+    if (img.complete && img.naturalWidth === 0) empty();
+    else img.addEventListener('error', empty, { once: true });
+  });
 
   /* Footer year */
   const year = $('#year');

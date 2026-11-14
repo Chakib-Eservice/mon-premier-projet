@@ -19,3 +19,12 @@ Aucun fichier externe à oublier : le design s'affiche même si on ouvre `index.
 ```bash
 python3 -m http.server 8000
 ```
+
+## Google Business Profile & SEO local
+- **Données structurées** : bloc JSON-LD `LocalBusiness` / `InternetCafe` dans le `<head>` (nom, adresse Cosider, Nouvelle Ville, Ali Mendjeli, Constantine, téléphone, site, réseaux, services). À tester sur https://search.google.com/test/rich-results
+- **Lien de la fiche Google** : dans le `<script>` en bas de `index.html`, constante `GBP` :
+  - `url` → collez le lien de partage de la fiche (Google Maps → Partager, ex. `https://maps.app.goo.gl/...`) ; tous les boutons « Avis Google », « Google Maps » et la galerie l'utilisent.
+  - `placeId` → (optionnel) active le lien direct « Laisser un avis ».
+  - Mettez aussi ce lien dans `"hasMap"` du JSON-LD.
+- **Photos** : voir `images/README.md`.
+- Gardez exactement le même nom, adresse et téléphone sur le site, la fiche Google et les réseaux (cohérence NAP).
