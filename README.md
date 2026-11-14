@@ -63,3 +63,10 @@ Généré en JavaScript (fin du `<script>` dans `index.html`, bloc *Digital city
 - Styles et script partagés : `assets/blog.css`, `assets/blog.js`.
 - Ajouter un article : copier un fichier de `articles/`, changer titre, description, `canonical`, JSON-LD et contenu ; ajouter sa carte dans `articles/index.html` et dans `#blog` de l'accueil, dans le nœud `Blog` du JSON-LD de l'accueil et dans `sitemap.xml`.
 - Les démarches évoluent : relire les articles chaque année (dates, plateformes officielles).
+
+## Performance
+- **Polices auto-hébergées** dans `assets/fonts/` (sous-ensembles latin + arabe, `font-display: swap`, préchargement des polices du titre) : plus aucune requête vers Google Fonts.
+- **Images WebP responsives** (`images/*-480|800|1200.webp`) via `<picture>` + `srcset`/`sizes` ; les JPG d'origine restent en secours et pour les aperçus de partage. Pour une nouvelle photo : générer les variantes WebP aux mêmes largeurs.
+- **Rendu** : `content-visibility: auto` sur les sections hors écran ; sur mobile/tactile, pas de flou d'arrière-plan en direct ni d'effet de flou à l'apparition (même rendu visuel, beaucoup moins coûteux).
+- **Animations** : uniquement `transform`/`opacity` (composées par le GPU) ; le fond « carte » démarre après le chargement, quand le navigateur est inactif, à ~30 i/s, et se met en pause si l'onglet est masqué ou en mode économie de données.
+- **Cache** (`netlify.toml`) : polices 1 an (immutable), CSS/JS 7 jours (versionnés avec `?v=`), images 30 jours. Après une modification de `assets/blog.css` ou `assets/blog.js`, incrémenter `?v=` dans les pages.

@@ -1,6 +1,17 @@
 [build]
   publish = "."
 
+# Long-lived caching for static assets (fonts never change; CSS/JS are versioned with ?v=)
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
 [[headers]]
   for = "/images/*"
   [headers.values]

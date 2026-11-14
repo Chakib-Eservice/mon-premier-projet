@@ -31,11 +31,51 @@
   <meta name="twitter:image" content="https://chakibeservice.netlify.app/images/facade-e-service-ali-mendjeli.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233b82ff%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230a2a8c%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url(%23g)%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2245%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%3EC%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="preload" as="image" href="images/facade-e-service-ali-mendjeli.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=Noto+Kufi+Arabic:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="images/facade-e-service-ali-mendjeli-480.webp 480w, images/facade-e-service-ali-mendjeli-800.webp 800w, images/facade-e-service-ali-mendjeli-1200.webp 1200w" imagesizes="(max-width: 960px) 92vw, 520px" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/sora-latin-500-800.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-latin-400-700.woff2" crossorigin>
 <style>
+/* Self-hosted fonts (latin + arabic subsets only, font-display: swap) */
+/* Manrope – latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(assets/fonts/manrope-latin-400-700.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Sora – latin */
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: url(assets/fonts/sora-latin-500-800.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Noto Kufi Arabic – arabic */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(assets/fonts/noto-kufi-arabic-arabic-500-700.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+
+/* Noto Kufi Arabic – latin */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(assets/fonts/noto-kufi-arabic-latin-500-700.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* =========================================================
    Chakib E-Service — palette: black + deep blue ONLY
    1. Tokens   2. Base      3. Buttons & icons  4. Header
@@ -169,8 +209,8 @@ address { font-style: normal; }
 .btn--ghost { color: var(--text); background: rgba(91,140,255,.06); border-color: var(--border-strong); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .btn--ghost:hover { background: rgba(91,140,255,.14); border-color: rgba(91,140,255,.6); transform: translateY(-3px); box-shadow: 0 12px 30px -12px var(--glow); }
 .btn--ghost:hover .btn__icon { transform: translateX(3px); }
-.btn--pulse::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -2; animation: pulse 2.2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(47,107,255,.6); } 70% { box-shadow: 0 0 0 18px rgba(47,107,255,0); } 100% { box-shadow: 0 0 0 0 rgba(47,107,255,0); } }
+.btn--pulse::before { content: ""; position: absolute; inset: -2px; border-radius: inherit; z-index: -2; border: 2px solid rgba(91,140,255,.7); box-shadow: 0 0 18px rgba(47,107,255,.45); pointer-events: none; animation: pulse 2.2s cubic-bezier(.2,.6,.3,1) infinite; will-change: transform, opacity; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .85; } 75%, 100% { transform: scale(1.08, 1.55); opacity: 0; } }
 
 .soc-icon {
   position: relative; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
@@ -694,6 +734,20 @@ a.gbp-line:hover { color: var(--blue-300); }
   .faq__item summary { padding: 16px 18px; font-size: .98rem; }
   .faq__a { padding: 0 18px 18px; }
 }
+
+/* 18. Performance ------------------------------------------ */
+picture { display: contents; }
+/* skip layout/paint of off-screen sections until they approach the viewport */
+main > section:not(.hero), .footer { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+/* touch devices / small screens: same look, cheaper effects (no live backdrop blur, no blur-in) */
+@media (hover: none), (max-width: 960px) {
+  .reveal { filter: none; }
+  .glass, .bureau-frame, .bureau-caption, .bureau-chip, .float-badge, .ph__zoom, .gbp-map__chip, .btn--ghost, .soc-pill, .fab-tip {
+    -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .glass { background: linear-gradient(160deg, rgba(16,30,66,.88), rgba(6,12,26,.86)); }
+  .bureau-caption, .bureau-chip, .float-badge, .fab-tip, .gbp-map__chip { background: rgba(6,12,26,.9); }
+  .orb { animation: none; }
+}
 </style>
   <script type="application/ld+json">
 {
@@ -1122,11 +1176,11 @@ a.gbp-line:hover { color: var(--blue-300); }
 
         <div class="hero__visual reveal" style="--d:160ms">
           <figure class="photo-card photo-card--main tilt">
-            <img src="images/facade-e-service-ali-mendjeli.jpg" alt="Façade de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli : dossiers visa, numérisation, services en ligne, impression et design" width="1280" height="960" fetchpriority="high">
+            <picture><source type="image/webp" srcset="images/facade-e-service-ali-mendjeli-480.webp 480w, images/facade-e-service-ali-mendjeli-800.webp 800w, images/facade-e-service-ali-mendjeli-1200.webp 1200w" sizes="(max-width: 960px) 92vw, 520px"><img src="images/facade-e-service-ali-mendjeli.jpg" alt="Façade de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli : dossiers visa, numérisation, services en ligne, impression et design" width="1280" height="960" fetchpriority="high"></picture>
             <figcaption class="photo-card__label"><svg><use href="#i-pin"/></svg>Cosider, Ali Mendjeli</figcaption>
           </figure>
           <figure class="photo-card photo-card--sub">
-            <img src="images/espace-bureau-interieur.jpg" alt="Espace de travail intérieur de Chakib E-Service avec postes informatiques" width="1280" height="960" loading="lazy">
+            <picture><source type="image/webp" srcset="images/espace-bureau-interieur-480.webp 480w, images/espace-bureau-interieur-800.webp 800w, images/espace-bureau-interieur-1200.webp 1200w" sizes="(max-width: 600px) 46vw, 260px"><img src="images/espace-bureau-interieur.jpg" alt="Espace de travail intérieur de Chakib E-Service avec postes informatiques" width="1280" height="960" loading="lazy"></picture>
           </figure>
           <a class="float-badge float-badge--rating" href="#avis">
             <span class="float-badge__icon"><svg><use href="#i-google"/></svg></span>
@@ -1149,7 +1203,7 @@ a.gbp-line:hover { color: var(--blue-300); }
       <div class="container bureau">
         <figure class="bureau-frame reveal">
           <div class="bureau-frame__inner">
-            <img src="images/boutique-e-service-entree.jpg" alt="Devanture de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli : dossiers visa, numérisation et bureau, services en ligne, impression et design" width="1050" height="1400" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/boutique-e-service-entree-480.webp 480w, images/boutique-e-service-entree-800.webp 800w, images/boutique-e-service-entree-1050.webp 1050w" sizes="(max-width: 960px) 92vw, 540px"><img src="images/boutique-e-service-entree.jpg" alt="Devanture de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli : dossiers visa, numérisation et bureau, services en ligne, impression et design" width="1050" height="1400" loading="lazy" decoding="async"></picture>
             <span class="bureau-frame__sheen" aria-hidden="true"></span>
           </div>
           <span class="bureau-chip"><svg><use href="#i-pin"/></svg>Cosider, Nouvelle Ville</span>
@@ -1188,7 +1242,7 @@ a.gbp-line:hover { color: var(--blue-300); }
 
         <div class="services-layout">
           <figure class="services-photo reveal">
-            <img src="images/vitrine-services.jpg" alt="Vitrine de Chakib E-Service présentant les services : ANGEM, ANADE, scan et impression, rédaction, Progres, BAC/BEM, bourse universitaire" width="1050" height="1400" loading="lazy">
+            <picture><source type="image/webp" srcset="images/vitrine-services-480.webp 480w, images/vitrine-services-800.webp 800w, images/vitrine-services-1050.webp 1050w" sizes="(max-width: 1100px) 92vw, 300px"><img src="images/vitrine-services.jpg" alt="Vitrine de Chakib E-Service présentant les services : ANGEM, ANADE, scan et impression, rédaction, Progres, BAC/BEM, bourse universitaire" width="1050" height="1400" loading="lazy"></picture>
             <figcaption><b>Tous nos services en vitrine</b><span>ANGEM, ANADE, Progres, BAC/BEM, scan, impression…</span></figcaption>
           </figure>
           <div class="services" data-stagger>
@@ -1258,27 +1312,27 @@ a.gbp-line:hover { color: var(--blue-300); }
         </header>
         <div class="gallery" data-stagger>
           <button class="ph ph--a reveal" type="button" data-caption="Notre local · Cosider, Nouvelle Ville, Ali Mendjeli" aria-label="Agrandir : Notre local">
-            <img src="images/facade-e-service-ali-mendjeli.jpg" alt="Façade de Chakib E-Service à Cosider, Ali Mendjeli" width="1280" height="960" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/facade-e-service-ali-mendjeli-480.webp 480w, images/facade-e-service-ali-mendjeli-800.webp 800w, images/facade-e-service-ali-mendjeli-1200.webp 1200w" sizes="(max-width: 960px) 92vw, 600px"><img src="images/facade-e-service-ali-mendjeli.jpg" alt="Façade de Chakib E-Service à Cosider, Ali Mendjeli" width="1280" height="960" loading="lazy" decoding="async"></picture>
             <span class="ph__cap">Notre local<small>Cosider, Nouvelle Ville, Ali Mendjeli</small></span>
             <span class="ph__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
           </button>
           <button class="ph ph--b reveal" type="button" data-caption="L'entrée · Accueil sans rendez-vous" aria-label="Agrandir : L'entrée">
-            <img src="images/boutique-e-service-entree.jpg" alt="Entrée vitrée de Chakib E-Service avec affiches des services" width="1050" height="1400" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/boutique-e-service-entree-480.webp 480w, images/boutique-e-service-entree-800.webp 800w, images/boutique-e-service-entree-1050.webp 1050w" sizes="(max-width: 960px) 46vw, 290px"><img src="images/boutique-e-service-entree.jpg" alt="Entrée vitrée de Chakib E-Service avec affiches des services" width="1050" height="1400" loading="lazy" decoding="async"></picture>
             <span class="ph__cap">L'entrée<small>Accueil sans rendez-vous</small></span>
             <span class="ph__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
           </button>
           <button class="ph ph--c reveal" type="button" data-caption="Nos services en vitrine · Progres, BAC/BEM, ANGEM, ANADE…" aria-label="Agrandir : Nos services en vitrine">
-            <img src="images/vitrine-services.jpg" alt="Affiches des services en vitrine : Progres, BAC, ANGEM, ANADE, scan et impression" width="1050" height="1400" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/vitrine-services-480.webp 480w, images/vitrine-services-800.webp 800w, images/vitrine-services-1050.webp 1050w" sizes="(max-width: 960px) 46vw, 290px"><img src="images/vitrine-services.jpg" alt="Affiches des services en vitrine : Progres, BAC, ANGEM, ANADE, scan et impression" width="1050" height="1400" loading="lazy" decoding="async"></picture>
             <span class="ph__cap">Nos services en vitrine<small>Progres, BAC/BEM, ANGEM, ANADE…</small></span>
             <span class="ph__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
           </button>
           <button class="ph ph--d reveal" type="button" data-caption="Espace de travail · Postes informatiques &amp; impression" aria-label="Agrandir : Espace de travail">
-            <img src="images/espace-bureau-interieur.jpg" alt="Intérieur de Chakib E-Service : bureaux, postes informatiques et imprimante" width="1280" height="960" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/espace-bureau-interieur-480.webp 480w, images/espace-bureau-interieur-800.webp 800w, images/espace-bureau-interieur-1200.webp 1200w" sizes="(max-width: 960px) 92vw, 600px"><img src="images/espace-bureau-interieur.jpg" alt="Intérieur de Chakib E-Service : bureaux, postes informatiques et imprimante" width="1280" height="960" loading="lazy" decoding="async"></picture>
             <span class="ph__cap">Espace de travail<small>Postes informatiques &amp; impression</small></span>
             <span class="ph__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
           </button>
           <button class="ph ph--e reveal" type="button" data-caption="Un poste de travail · Démarches en ligne au quotidien" aria-label="Agrandir : Un poste de travail">
-            <img src="images/poste-de-travail.jpg" alt="Poste de travail de Chakib E-Service avec la page Facebook à l'écran" width="809" height="1080" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="images/poste-de-travail-480.webp 480w, images/poste-de-travail-800.webp 800w, images/poste-de-travail-809.webp 809w" sizes="(max-width: 960px) 92vw, 600px"><img src="images/poste-de-travail.jpg" alt="Poste de travail de Chakib E-Service avec la page Facebook à l'écran" width="809" height="1080" loading="lazy" decoding="async"></picture>
             <span class="ph__cap">Un poste de travail<small>Démarches en ligne au quotidien</small></span>
             <span class="ph__zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
           </button>
@@ -1514,7 +1568,7 @@ a.gbp-line:hover { color: var(--blue-300); }
     <section class="section" id="contact" style="padding-top:20px">
       <div class="container">
         <div class="cta-band reveal">
-          <div class="cta-band__bg" aria-hidden="true"><img src="images/espace-bureau-interieur.jpg" alt="" width="1280" height="960" loading="lazy"></div>
+          <div class="cta-band__bg" aria-hidden="true"><picture><source type="image/webp" srcset="images/espace-bureau-interieur-480.webp 480w, images/espace-bureau-interieur-800.webp 800w, images/espace-bureau-interieur-1200.webp 1200w" sizes="(max-width: 960px) 100vw, 1200px"><img src="images/espace-bureau-interieur.jpg" alt="" width="1280" height="960" loading="lazy"></picture></div>
           <div class="cta-band__copy">
             <h2>Un dossier à lancer&nbsp;? <span class="text-gradient">Écrivez-nous maintenant.</span></h2>
             <p lang="ar" dir="rtl" class="cta-band__ar">راسلنا الآن على الواتساب</p>
@@ -1573,7 +1627,7 @@ a.gbp-line:hover { color: var(--blue-300); }
       <div>
         <h4>Visitez-nous</h4>
         <a class="visit" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener">
-          <div class="visit__img"><img src="images/boutique-e-service-entree.jpg" alt="Entrée de Chakib E-Service à Ali Mendjeli" width="1050" height="1400" loading="lazy"></div>
+          <div class="visit__img"><picture><source type="image/webp" srcset="images/boutique-e-service-entree-480.webp 480w, images/boutique-e-service-entree-800.webp 800w, images/boutique-e-service-entree-1050.webp 1050w" sizes="(max-width: 600px) 92vw, 300px"><img src="images/boutique-e-service-entree.jpg" alt="Entrée de Chakib E-Service à Ali Mendjeli" width="1050" height="1400" loading="lazy"></picture></div>
           <div class="visit__body"><b>Chakib E-Service</b><span>Cosider, Ali Mendjeli, El Khroub</span><em><svg><use href="#i-route"/></svg>Itinéraire Google Maps</em></div>
         </a>
       </div>
@@ -1638,7 +1692,12 @@ a.gbp-line:hover { color: var(--blue-300); }
     bar.style.setProperty('--sp', max > 0 ? (y / max).toFixed(4) : 0);
   };
   onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  let scrollTick = false;
+  window.addEventListener('scroll', () => {
+    if (scrollTick) return;
+    scrollTick = true;
+    requestAnimationFrame(() => { scrollTick = false; onScroll(); });
+  }, { passive: true });
 
   /* Mobile menu */
   const burger = $('#burger');
@@ -1683,11 +1742,16 @@ a.gbp-line:hover { color: var(--blue-300); }
   if (finePointer && !reduceMotion) {
     /* Cursor-follow glow on cards */
     $$('.glow-card').forEach((card) => {
+      let pending = null;
       card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
-        card.style.setProperty('--my', `${e.clientY - r.top}px`);
-      });
+        if (!pending) requestAnimationFrame(() => {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', `${pending.x - r.left}px`);
+          card.style.setProperty('--my', `${pending.y - r.top}px`);
+          pending = null;
+        });
+        pending = { x: e.clientX, y: e.clientY };
+      }, { passive: true });
     });
     /* 3D tilt on hero photo */
     const tilt = $('.tilt');
@@ -1717,7 +1781,7 @@ a.gbp-line:hover { color: var(--blue-300); }
   const show = (i) => {
     current = (i + items.length) % items.length;
     const img = $('img', items[current]);
-    $('img', lb).src = img.currentSrc || img.src;
+    $('img', lb).src = img.getAttribute('src');
     $('img', lb).alt = img.alt;
     $('.lightbox__cap', lb).textContent = items[current].dataset.caption || '';
   };
@@ -1866,7 +1930,8 @@ a.gbp-line:hover { color: var(--blue-300); }
       // light "cars" travelling along the roads
       cars = [];
       if (!reduceMotion) {
-        const n = small ? 6 : 12;
+        const lowEnd = (navigator.hardwareConcurrency || 8) <= 4;
+        const n = small || lowEnd ? 6 : 12;
         const majors = roads.filter((r) => r.major && r.total > 200), all = roads.filter((r) => r.total > 160);
         for (let i = 0; i < n; i++) {
           const el = document.createElement('span');
@@ -1901,9 +1966,12 @@ a.gbp-line:hover { color: var(--blue-300); }
       car.el.style.opacity = Math.min(1, car.d / 60, (r.total - car.d) / 60).toFixed(2);
     };
 
+    let prevT = 0;
     const frame = (t) => {
       raf = requestAnimationFrame(frame);
-      const dt = last ? Math.min((t - last) / 1000, 0.05) : 0.016;
+      if (t - prevT < 32) return; // ~30 fps is plenty for slow drifting traffic
+      prevT = t;
+      const dt = last ? Math.min((t - last) / 1000, 0.1) : 0.033;
       last = t;
       for (const car of cars) {
         car.d += car.v * dt;
@@ -1919,9 +1987,16 @@ a.gbp-line:hover { color: var(--blue-300); }
     const start = () => { if (!raf && !reduceMotion) { last = 0; raf = requestAnimationFrame(frame); } };
     const stop = () => { cancelAnimationFrame(raf); raf = 0; };
 
-    build();
-    host.classList.add('is-ready');
-    start();
+    const saveData = navigator.connection && navigator.connection.saveData;
+    const init = () => {
+      build();
+      host.classList.add('is-ready');
+      if (!saveData) start();
+    };
+    // build the map only after the page has loaded and the browser is idle, so it never delays first paint
+    const whenIdle = (fn) => ('requestIdleCallback' in window ? requestIdleCallback(fn, { timeout: 1500 }) : setTimeout(fn, 300));
+    if (document.readyState === 'complete') whenIdle(init);
+    else window.addEventListener('load', () => whenIdle(init), { once: true });
 
     let lw = window.innerWidth, lh = window.innerHeight, rt;
     window.addEventListener('resize', () => {
@@ -1929,11 +2004,11 @@ a.gbp-line:hover { color: var(--blue-300); }
       rt = setTimeout(() => {
         // ignore small height changes (mobile address bar) to avoid needless rebuilds
         if (Math.abs(window.innerWidth - lw) > 60 || Math.abs(window.innerHeight - lh) > 160) {
-          lw = window.innerWidth; lh = window.innerHeight; build();
+          lw = window.innerWidth; lh = window.innerHeight; if (host.classList.contains('is-ready')) build();
         }
       }, 200);
     });
-    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+    document.addEventListener('visibilitychange', () => (document.hidden || saveData ? stop() : start()));
     if (finePointer) {
       window.addEventListener('pointermove', (e) => {
         par.tx = (e.clientX / window.innerWidth - 0.5) * -24;
