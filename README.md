@@ -53,8 +53,13 @@ Généré en JavaScript (fin du `<script>` dans `index.html`, bloc *Digital city
 - Moins d'éléments sur mobile, pause quand l'onglet est caché, image fixe si l'utilisateur a activé « réduire les animations ».
 - Couleurs : bleu profond et noir uniquement. Réglages : `step` (taille des îlots), nombre de véhicules (`n`), opacités dans le gabarit SVG.
 
-## Blog / Articles (arabe)
-- Section « Blog & guides » sur la page d'accueil (`#blog`) avec une carte par article.
-- Articles : `articles/guide-demarches-administratives-en-ligne-algerie.html` et `articles/guide-progres-campus-france.html` (page RTL, sommaire, barre de lecture, balisage `BlogPosting` + `BreadcrumbList`). Styles et script partagés : `assets/blog.css`, `assets/blog.js`.
-- Ajouter un article : copier un fichier de `articles/`, changer le titre, la description, le `canonical`, le JSON-LD et le contenu ; puis ajouter une carte `.post` dans `#blog`, une entrée dans le nœud `Blog` du JSON-LD de `index.html` et une URL dans `sitemap.xml`.
+## Blog / Articles (arabe) et pages d'information
+- **Page Blog** : `articles/index.html` (liste de tous les articles) ; aperçu des 6 articles dans la section `#blog` de l'accueil.
+- **Articles** (RTL, sommaire, barre de lecture, balisage `BlogPosting` + `BreadcrumbList`) :
+  - `guide-demarches-administratives-en-ligne-algerie.html`, `guide-progres-campus-france.html`,
+  - `guide-paiement-electronique-edahabia-baridimob.html`, `guide-cv-ats.html`,
+  - `guide-dossier-visa-schengen.html`, `guide-numerisation-documents-pdf.html`.
+- **Pages** : `a-propos.html`, `contact.html`, `politique-de-confidentialite.html` (même en-tête et pied de page partout : Accueil · Blog · À propos · Contact · Politique de confidentialité).
+- Styles et script partagés : `assets/blog.css`, `assets/blog.js`.
+- Ajouter un article : copier un fichier de `articles/`, changer titre, description, `canonical`, JSON-LD et contenu ; ajouter sa carte dans `articles/index.html` et dans `#blog` de l'accueil, dans le nœud `Blog` du JSON-LD de l'accueil et dans `sitemap.xml`.
 - Les démarches évoluent : relire les articles chaque année (dates, plateformes officielles).

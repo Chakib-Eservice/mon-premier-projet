@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chakib E-Service · Cybercafé &amp; services administratifs à Ali Mendjeli, Constantine</title>
-  <meta name="description" content="Chakib E-Service, cybercafé, services numériques et administratifs et boutique de football à Cosider, Ali Mendjeli (El Khroub, Constantine) : dossiers visa, Campus France, Progres, CNRC, paiements en ligne, impression. Noté 5,0 sur Google. WhatsApp : +213 542 52 20 33.">
+  <meta name="description" content="Cybercafé et services administratifs à Cosider, Ali Mendjeli (Constantine) : visa, Campus France, Progres, CNRC, paiements en ligne. Noté 5,0 sur Google.">
   <meta name="keywords" content="cybercafé Ali Mendjeli, cybercafé El Khroub, boutique football Ali Mendjeli, équipements de football Constantine, services administratifs Constantine, dossier visa Constantine, Campus France Constantine, Progres, inscription BAC BEM, CNRC auto-entrepreneur, ANGEM, ANADE, impression Ali Mendjeli, Nouvelle Ville, Cosider, خدمات إلكترونية علي منجلي, ملفات الفيزا قسنطينة">
   <meta name="author" content="Chakib E-Service">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -465,7 +465,8 @@ a.gbp-line:hover { color: var(--blue-300); }
 
 /* 11c. Blog cards ------------------------------------------ */
 .blog-ar { font-family: var(--font-ar); color: var(--blue-300) !important; }
-.posts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+@media (max-width: 1100px) { .posts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .post { display: flex; flex-direction: column; padding: 0; overflow: hidden; font-family: var(--font-ar); }
 .post__cover { position: relative; height: 170px; display: grid; place-items: center; overflow: hidden; border-bottom: 1px solid var(--border);
   background: radial-gradient(80% 120% at 80% 0%, rgba(29,79,240,.45), transparent 60%), radial-gradient(70% 100% at 10% 100%, rgba(10,42,140,.7), transparent 70%), var(--bg-2); }
@@ -535,8 +536,8 @@ a.gbp-line:hover { color: var(--blue-300); }
 .footer__legal { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .footer__legal a { position: relative; transition: color .3s; }
 .footer__legal a:hover { color: var(--blue-300); }
-.footer__legal a:first-child::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: var(--blue-400); transform: scaleX(0); transform-origin: 0 50%; transition: transform .4s var(--ease); }
-.footer__legal a:first-child:hover::after { transform: scaleX(1); }
+.footer__legal a:not(.to-top)::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: var(--blue-400); transform: scaleX(0); transform-origin: 0 50%; transition: transform .4s var(--ease); }
+.footer__legal a:not(.to-top):hover::after { transform: scaleX(1); }
 
 /* 15. FAB + lightbox --------------------------------------- */
 .fab { position: fixed; right: 22px; bottom: 22px; z-index: 90; display: grid; justify-items: end; gap: 12px; pointer-events: none; }
@@ -996,10 +997,10 @@ a.gbp-line:hover { color: var(--blue-300); }
     },
     {
       "@type": "Blog",
-      "@id": "https://chakibeservice.netlify.app/#blog",
+      "@id": "https://chakibeservice.netlify.app/articles/#blog",
       "name": "Blog Chakib E-Service",
       "inLanguage": "ar-DZ",
-      "url": "https://chakibeservice.netlify.app/#blog",
+      "url": "https://chakibeservice.netlify.app/articles/",
       "publisher": {
         "@id": "https://chakibeservice.netlify.app/#business"
       },
@@ -1015,6 +1016,34 @@ a.gbp-line:hover { color: var(--blue-300); }
           "@type": "BlogPosting",
           "headline": "التسجيل الجامعي والدراسة في فرنسا: دليل Progres و Campus France خطوة بخطوة",
           "url": "https://chakibeservice.netlify.app/articles/guide-progres-campus-france.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "البطاقة الذهبية وتطبيق BaridiMob: دليلك للدفع الإلكتروني وتسديد الفواتير في الجزائر",
+          "url": "https://chakibeservice.netlify.app/articles/guide-paiement-electronique-edahabia-baridimob.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "كيف تكتب سيرة ذاتية بصيغة ATS تتجاوز الفرز الآلي وتلفت انتباه المشغّل؟",
+          "url": "https://chakibeservice.netlify.app/articles/guide-cv-ats.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ملف تأشيرة شنغن: الوثائق الأساسية والخطوات ونصائح لتفادي الرفض",
+          "url": "https://chakibeservice.netlify.app/articles/guide-dossier-visa-schengen.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "كيف تجهّز وثائقك رقميا؟ دليل المسح الضوئي وتحويل الملفات إلى PDF",
+          "url": "https://chakibeservice.netlify.app/articles/guide-numerisation-documents-pdf.html",
           "datePublished": "2026-11-14",
           "inLanguage": "ar-DZ"
         }
@@ -1361,7 +1390,60 @@ a.gbp-line:hover { color: var(--blue-300); }
               <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
             </div>
           </a>
+          <a class="post glass glow-card reveal" href="articles/guide-paiement-electronique-edahabia-baridimob.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 10h18M7 15h4"/></svg>
+              <span class="post__num">03</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">الدفع الإلكتروني</span>
+              <h3>البطاقة الذهبية وتطبيق BaridiMob: دليلك للدفع الإلكتروني وتسديد الفواتير في الجزائر</h3>
+              <p>كل ما تحتاج معرفته عن البطاقة الذهبية (Edahabia) وتطبيق BaridiMob لبريد الجزائر: الاستعمالات، تسديد الفواتير عبر الإنترنت خطوة بخطوة، ونصائح الأمان لحماية حسابك من الاحتيال.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
+          <a class="post glass glow-card reveal" href="articles/guide-cv-ats.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h7M9 15.5h7M9 8.5h3"/></svg>
+              <span class="post__num">04</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">التوظيف والمنح</span>
+              <h3>كيف تكتب سيرة ذاتية بصيغة ATS تتجاوز الفرز الآلي وتلفت انتباه المشغّل؟</h3>
+              <p>دليل عملي لكتابة سيرة ذاتية متوافقة مع أنظمة ATS: البنية المثالية، قواعد التنسيق، اختيار الكلمات المفتاحية، والأخطاء التي تُسقط ملفك قبل أن يقرأه أي شخص.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
+          <a class="post glass glow-card reveal" href="articles/guide-dossier-visa-schengen.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M10.2 13.8 3 11l1.6-1.6 9 1.3 4.6-4.6a2 2 0 0 1 2.8 2.8l-4.6 4.6 1.3 9L16.1 24l-2.8-7.2M7 17l-3 3"/></svg>
+              <span class="post__num">05</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">ملفات التأشيرة</span>
+              <h3>ملف تأشيرة شنغن: الوثائق الأساسية والخطوات ونصائح لتفادي الرفض</h3>
+              <p>دليل تحضير ملف تأشيرة شنغن قصيرة المدة: اختيار القنصلية المختصة، الوثائق الأساسية (جواز السفر، التأمين، الإيواء، الموارد المالية)، آجال الإيداع، ونصائح لتفادي الرفض.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
+          <a class="post glass glow-card reveal" href="articles/guide-numerisation-documents-pdf.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10M9 8h6M9 16h6"/></svg>
+              <span class="post__num">06</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">نصائح رقمية</span>
+              <h3>كيف تجهّز وثائقك رقميا؟ دليل المسح الضوئي وتحويل الملفات إلى PDF</h3>
+              <p>نصائح عملية لمسح وثائقك ضوئيا بجودة مقبولة في المنصات الإلكترونية: الماسح أو الهاتف، الدقة والصيغة المناسبتان، ضغط الملفات ودمجها، تسميتها، وحماية وثائقك الشخصية.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
         </div>
+        <div class="gallery__more reveal"><a class="btn btn--ghost btn--lg" href="articles/index.html"><span>Voir tous les articles</span><svg class="btn__icon"><use href="#i-arrow"/></svg></a></div>
       </div>
     </section>
 
@@ -1499,7 +1581,9 @@ a.gbp-line:hover { color: var(--blue-300); }
           <li><address>Cosider, Ali Mendjeli<br>El Khroub, Constantine</address></li>
           <li><a href="#avis">★ 5,0 sur Google</a></li>
           <li><a href="#faq">Questions fréquentes</a></li>
-          <li><a href="#blog">Blog &amp; guides</a></li>
+          <li><a href="articles/index.html">Blog &amp; guides</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -1512,7 +1596,7 @@ a.gbp-line:hover { color: var(--blue-300); }
     </div>
     <div class="container footer__bottom">
       <p>© <span id="year">2026</span> Chakib E-Service · Ali Mendjeli, Constantine</p>
-      <nav class="footer__legal" aria-label="Informations légales"><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="#top" class="to-top">Haut de page ↑</a></nav>
+      <nav class="footer__legal" aria-label="Informations légales"><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a><a href="articles/index.html">Blog</a><a href="politique-de-confidentialite.html">Politique de confidentialité</a><a href="#top" class="to-top">Haut de page ↑</a></nav>
     </div>
   </footer>
 
