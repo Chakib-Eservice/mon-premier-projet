@@ -294,6 +294,48 @@ address { font-style: normal; }
 .svc__cta:hover { background: rgba(47,107,255,.14); color: #fff; }
 .svc__cta:hover svg { transform: translateX(4px); }
 
+/* 8a. Le bureau (storefront showcase) --------------------- */
+#bureau { overflow-x: clip; }
+.bureau { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 40px; align-items: center; }
+.bureau-frame {
+  position: relative; padding: 10px; border-radius: 30px; perspective: 1200px;
+  background: linear-gradient(160deg, rgba(91,140,255,.12), rgba(6,12,26,.6)) padding-box,
+              linear-gradient(140deg, var(--blue-300), rgba(47,107,255,.15) 40%, rgba(47,107,255,.05) 60%, var(--blue-600)) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 40px 90px -40px rgba(0,0,0,.95), 0 0 70px -30px var(--glow);
+  transition: transform .7s var(--ease), box-shadow .7s var(--ease);
+}
+.bureau-frame::before { content: ""; position: absolute; inset: -30px; z-index: -1; border-radius: 50px; background: radial-gradient(closest-side, rgba(29,79,240,.35), transparent); filter: blur(20px); opacity: .6; transition: opacity .7s; }
+.bureau-frame:hover { box-shadow: 0 50px 100px -40px rgba(0,0,0,.95), 0 0 90px -20px rgba(47,107,255,.75); }
+.bureau-frame:hover::before { opacity: 1; }
+.bureau-frame__inner { position: relative; overflow: hidden; border-radius: 22px; aspect-ratio: 3 / 3.6; background: var(--bg-3); }
+.bureau-frame__inner img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; filter: saturate(.92) brightness(.95); transition: transform 1.4s var(--ease), filter .7s; }
+.bureau-frame:hover .bureau-frame__inner img { transform: scale(1.06); filter: saturate(1) brightness(1.02); }
+.bureau-frame__inner::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(7,26,77,.15), transparent 30%, transparent 55%, rgba(3,6,13,.88)); }
+.bureau-frame__sheen { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(115deg, transparent 35%, rgba(196,212,255,.16) 50%, transparent 65%); transform: translateX(-120%); transition: transform 1.2s var(--ease); }
+.bureau-frame:hover .bureau-frame__sheen { transform: translateX(120%); }
+.bureau-chip { position: absolute; z-index: 2; top: 26px; left: 26px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; font-size: .85rem; font-weight: 700; background: rgba(3,6,13,.66); border: 1px solid var(--border-strong); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 0 24px -10px var(--glow); animation: float 6s ease-in-out infinite; }
+.bureau-chip svg { width: 16px; height: 16px; color: var(--blue-300); }
+.bureau-caption { position: absolute; z-index: 2; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 14px 14px 18px; border-radius: 18px; background: rgba(6,12,26,.62); border: 1px solid var(--border-strong); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); transition: transform .6s var(--ease), border-color .6s; }
+.bureau-frame:hover .bureau-caption { transform: translateY(-4px); border-color: rgba(91,140,255,.5); }
+.bureau-caption b { display: block; font-family: var(--font-display); font-size: 1.05rem; }
+.bureau-caption small { display: block; color: var(--muted); font-size: .84rem; }
+.bureau-caption__btn { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 13px; color: #fff; background: linear-gradient(135deg, var(--blue-400), var(--blue-800)); box-shadow: 0 8px 22px -8px var(--glow); transition: transform .35s var(--ease), box-shadow .35s; }
+.bureau-caption__btn svg { width: 19px; height: 19px; }
+.bureau-caption__btn:hover { transform: translateY(-2px) rotate(-6deg); box-shadow: 0 12px 30px -8px rgba(47,107,255,.9); }
+.bureau-info { padding: 40px; display: grid; gap: 20px; justify-items: start; }
+.bureau-info h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; }
+.bureau-info__lead { color: var(--muted); font-size: 1.04rem; }
+.sign-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
+.sign-tile { display: flex; align-items: center; gap: 12px; padding: 14px; border-radius: 16px; background: rgba(91,140,255,.05); border: 1px solid var(--border); transition: border-color .4s, background .4s, transform .4s var(--ease), box-shadow .4s; }
+.sign-tile:hover { border-color: rgba(91,140,255,.5); background: rgba(47,107,255,.1); transform: translateY(-3px); box-shadow: 0 0 30px -12px var(--glow); }
+.sign-tile__icon { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: #fff; background: linear-gradient(135deg, var(--blue-500), var(--blue-800)); box-shadow: 0 0 20px -6px var(--glow); }
+.sign-tile__icon svg { width: 21px; height: 21px; }
+.sign-tile b { display: block; font-size: .92rem; line-height: 1.25; }
+.sign-tile small { display: block; font-size: .8rem; color: var(--blue-300); text-align: left; }
+.bureau-info__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+
 /* 9. Process ----------------------------------------------- */
 .process { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .process__step { padding: 32px; }
@@ -362,7 +404,7 @@ a.gbp-line:hover { color: var(--blue-300); }
 /* 13. CTA band --------------------------------------------- */
 .cta-band { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 64px 56px; border-radius: 28px; border: 1px solid rgba(91,140,255,.35); isolation: isolate; box-shadow: var(--shadow), 0 0 80px -30px var(--glow); }
 .cta-band__bg { position: absolute; inset: 0; z-index: -2; }
-.cta-band__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; transform: scale(1.06); transition: transform 1.6s var(--ease); }
+.cta-band__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; transform: scale(1.06); transition: transform 1.6s var(--ease); }
 .cta-band:hover .cta-band__bg img { transform: scale(1.1); }
 .cta-band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(3,6,13,.96) 0%, rgba(3,6,13,.88) 45%, rgba(7,26,77,.72) 100%); }
 .cta-band h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); max-width: 17ch; }
@@ -437,6 +479,8 @@ a.gbp-line:hover { color: var(--blue-300); }
   .socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-layout { grid-template-columns: minmax(0, 1fr); }
   .services-photo { position: relative; top: 0; aspect-ratio: 16 / 7; }
+  .bureau { gap: 28px; }
+  .bureau-info { padding: 32px; }
   .services-photo img { object-position: 50% 40%; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
@@ -461,6 +505,8 @@ a.gbp-line:hover { color: var(--blue-300); }
   .hero__inner { grid-template-columns: minmax(0, 1fr); gap: 44px; }
   .hero__visual { justify-self: center; max-width: 520px; }
   .process { grid-template-columns: minmax(0, 1fr); }
+  .bureau { grid-template-columns: minmax(0, 1fr); }
+  .bureau-frame { max-width: 560px; width: 100%; justify-self: center; }
   .gbp { grid-template-columns: minmax(0, 1fr); }
   .gbp-map { min-height: 340px; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 200px; }
@@ -495,6 +541,13 @@ a.gbp-line:hover { color: var(--blue-300); }
   .services-photo { aspect-ratio: 4 / 3; }
   .svc, .process__step { padding: 24px; }
   .socials { grid-template-columns: minmax(0, 1fr); }
+  .bureau-frame { padding: 7px; border-radius: 24px; }
+  .bureau-frame__inner { border-radius: 18px; aspect-ratio: 3 / 3.8; }
+  .bureau-chip { top: 18px; left: 18px; font-size: .78rem; }
+  .bureau-caption { left: 16px; right: 16px; bottom: 16px; }
+  .bureau-info { padding: 24px; }
+  .sign-tiles { grid-template-columns: minmax(0, 1fr); }
+  .bureau-info__actions, .bureau-info__actions .btn { width: 100%; }
   .soc-card { min-height: 0; }
   .gallery { grid-auto-rows: 150px; gap: 12px; }
   .ph figcaption, .ph .ph__cap { left: 12px; right: 48px; bottom: 10px; font-size: .84rem; }
@@ -608,6 +661,7 @@ a.gbp-line:hover { color: var(--blue-300); }
         <span class="brand__text">Chakib<b>E-Service</b></span>
       </a>
       <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#bureau">Le bureau</a>
         <a href="#services">Services</a>
         <a href="#galerie">Galerie</a>
         <a href="#avis">Avis Google</a>
@@ -675,6 +729,39 @@ a.gbp-line:hover { color: var(--blue-300); }
 
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track"><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span><span>Dossiers visa</span><span>Campus France</span><span>Progres</span><span>BAC · BEM</span><span>CNRC</span><span>Auto-entrepreneur</span><span>ANGEM</span><span>ANADE</span><span>Sonelgaz</span><span>Algérie Poste</span><span>Scan &amp; impression</span><span>Photocopie</span><span>Fax</span><span>Design</span><span>Formatage Windows</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Le bureau (storefront showcase) ===== -->
+    <section class="section" id="bureau">
+      <div class="container bureau">
+        <figure class="bureau-frame reveal">
+          <div class="bureau-frame__inner">
+            <img src="images/boutique-e-service-entree.jpg" alt="Devanture de Chakib E-Service à Cosider, Nouvelle Ville, Ali Mendjeli : dossiers visa, numérisation et bureau, services en ligne, impression et design" width="1050" height="1400" loading="lazy" decoding="async">
+            <span class="bureau-frame__sheen" aria-hidden="true"></span>
+          </div>
+          <span class="bureau-chip"><svg><use href="#i-pin"/></svg>Cosider, Nouvelle Ville</span>
+          <figcaption class="bureau-caption">
+            <span><b>Chakib E-Service</b><small>Ali Mendjeli, Constantine</small></span>
+            <a class="bureau-caption__btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener" aria-label="Itinéraire vers Chakib E-Service"><svg><use href="#i-route"/></svg></a>
+          </figcaption>
+        </figure>
+
+        <div class="bureau-info glass reveal" style="--d:120ms">
+          <p class="eyebrow"><span class="dot"></span>Le bureau</p>
+          <h2>Un vrai bureau, <span class="text-gradient">en plein Ali Mendjeli</span></h2>
+          <p class="bureau-info__lead">Passez nous voir à Cosider, Nouvelle Ville : un espace moderne, équipé et accueillant, où l'on traite vos démarches avec vous. Vous préférez à distance ? Tout se fait aussi sur WhatsApp.</p>
+          <ul class="sign-tiles" data-stagger>
+                <li class="sign-tile"><span class="sign-tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10.2 13.8 3 11l1.6-1.6 9 1.3 4.6-4.6a2 2 0 0 1 2.8 2.8l-4.6 4.6 1.3 9L16.1 24l-2.8-7.2M7 17l-3 3"/></svg></span><span><b>Dossiers visa</b><small lang="ar" dir="rtl">ملفات الفيزا</small></span></li>
+                <li class="sign-tile"><span class="sign-tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 8V3h10v5M7 17H4v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7h-3M7 14h10v7H7z"/></svg></span><span><b>Numérisation &amp; bureau</b><small lang="ar" dir="rtl">رقمنة المكتب</small></span></li>
+                <li class="sign-tile"><span class="sign-tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 4h18v12H3zM8 20h8M12 16v4M7 9l2.5 2.5L15 7"/></svg></span><span><b>Services en ligne</b><small lang="ar" dir="rtl">الخدمات الإلكترونية</small></span></li>
+                <li class="sign-tile"><span class="sign-tile__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.8 1.6-1.6 0-.9-.6-1.3-.6-2.1 0-1 .8-1.6 1.8-1.6H17a4 4 0 0 0 4-4C21 6.7 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="15" cy="7.5" r="1.2" fill="currentColor"/></svg></span><span><b>Impression &amp; design</b><small lang="ar" dir="rtl">الطباعة و التصميم</small></span></li>
+          </ul>
+          <div class="bureau-info__actions">
+            <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Chakib%20E-Service%2C%20Cosider%2C%20Nouvelle%20Ville%2C%20Ali%20Mendjeli%2C%20Constantine" target="_blank" rel="noopener"><svg class="btn__icon"><use href="#i-route"/></svg><span>Itinéraire</span></a>
+            <a class="btn btn--ghost" href="#galerie"><span>Voir la galerie</span><svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -869,7 +956,7 @@ a.gbp-line:hover { color: var(--blue-300); }
     <section class="section" id="contact" style="padding-top:20px">
       <div class="container">
         <div class="cta-band reveal">
-          <div class="cta-band__bg" aria-hidden="true"><img src="images/boutique-e-service-entree.jpg" alt="" width="1050" height="1400" loading="lazy"></div>
+          <div class="cta-band__bg" aria-hidden="true"><img src="images/espace-bureau-interieur.jpg" alt="" width="1280" height="960" loading="lazy"></div>
           <div class="cta-band__copy">
             <h2>Un dossier à lancer&nbsp;? <span class="text-gradient">Écrivez-nous maintenant.</span></h2>
             <p lang="ar" dir="rtl" class="cta-band__ar">راسلنا الآن على الواتساب</p>
@@ -1042,6 +1129,15 @@ a.gbp-line:hover { color: var(--blue-300); }
       tilt.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
     });
     zone.addEventListener('pointerleave', () => { tilt.style.transform = ''; });
+
+    const frame = $('.bureau-frame');
+    frame.addEventListener('pointermove', (e) => {
+      const r = frame.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      frame.style.transform = `perspective(1200px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
+    });
+    frame.addEventListener('pointerleave', () => { frame.style.transform = ''; });
   }
 
   /* Gallery lightbox */

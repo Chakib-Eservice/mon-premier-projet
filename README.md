@@ -10,9 +10,9 @@ Palette : **noir et bleu profond uniquement** (variables `--bg`, `--blue-*` en h
 | Photo (`images/`)                    | Utilisée dans                      |
 |--------------------------------------|------------------------------------|
 | `facade-e-service-ali-mendjeli.jpg`  | Hero, galerie, image de partage    |
-| `espace-bureau-interieur.jpg`        | Hero (vignette), galerie           |
+| `espace-bureau-interieur.jpg`        | Hero (vignette), galerie, bandeau contact |
 | `vitrine-services.jpg`               | Section services, galerie          |
-| `boutique-e-service-entree.jpg`      | Galerie, bandeau contact, footer   |
+| `boutique-e-service-entree.jpg`      | Section « Le bureau », galerie, footer |
 | `poste-de-travail.jpg`               | Galerie                            |
 
 Pour ajouter une photo : l'optimiser (≈1400 px, JPG qualité 80) et ajouter un bouton `.ph` dans la galerie.
