@@ -463,6 +463,26 @@ a.gbp-line:hover { color: var(--blue-300); }
 .faq__a strong { color: var(--text); }
 @keyframes faq-in { from { opacity: 0; transform: translateY(-8px); } }
 
+/* 11c. Blog cards ------------------------------------------ */
+.blog-ar { font-family: var(--font-ar); color: var(--blue-300) !important; }
+.posts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.post { display: flex; flex-direction: column; padding: 0; overflow: hidden; font-family: var(--font-ar); }
+.post__cover { position: relative; height: 170px; display: grid; place-items: center; overflow: hidden; border-bottom: 1px solid var(--border);
+  background: radial-gradient(80% 120% at 80% 0%, rgba(29,79,240,.45), transparent 60%), radial-gradient(70% 100% at 10% 100%, rgba(10,42,140,.7), transparent 70%), var(--bg-2); }
+.post__grid { position: absolute; inset: -20%; background-image: linear-gradient(rgba(143,176,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(143,176,255,.09) 1px, transparent 1px); background-size: 28px 28px; transform: perspective(500px) rotateX(55deg) translateY(10%); transition: transform 1.2s var(--ease); }
+.post:hover .post__grid { transform: perspective(500px) rotateX(55deg) translateY(18%); }
+.post__cover svg { position: relative; width: 64px; height: 64px; padding: 14px; border-radius: 20px; color: #fff; background: linear-gradient(135deg, var(--blue-400), var(--blue-800)); box-shadow: 0 0 40px -6px var(--glow); transition: transform .6s var(--ease); }
+.post:hover .post__cover svg { transform: translateY(-6px) rotate(-6deg) scale(1.06); }
+.post__num { position: absolute; inset-inline-start: 18px; bottom: 10px; font-family: var(--font-display); font-weight: 800; font-size: 2.6rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(143,176,255,.35); }
+.post__body { display: flex; flex-direction: column; gap: 10px; padding: 24px 26px 26px; flex: 1; }
+.post__tag { align-self: flex-start; padding: 4px 12px; border-radius: 999px; font-size: .78rem; font-weight: 700; color: var(--blue-300); background: rgba(47,107,255,.12); border: 1px solid rgba(91,140,255,.3); }
+.post h3 { font-family: var(--font-ar); font-size: 1.15rem; line-height: 1.7; letter-spacing: 0; }
+.post p { color: var(--muted); font-size: .92rem; line-height: 1.85; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.post__meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--border); font-size: .85rem; color: var(--muted); }
+.post__more { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--blue-300); transition: color .3s, gap .3s var(--ease); }
+.post__more svg { width: 16px; height: 16px; transform: rotate(180deg); }
+.post:hover .post__more { color: #fff; gap: 12px; }
+
 /* 12. Social ----------------------------------------------- */
 .socials { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .soc-card { display: flex; flex-direction: column; gap: 6px; padding: 28px 24px 24px; min-height: 280px; }
@@ -602,6 +622,7 @@ a.gbp-line:hover { color: var(--blue-300); }
   .rating-hero { grid-template-columns: minmax(0, 1fr); }
   .rating-hero__points { padding-left: 0; padding-top: 20px; border-left: 0; border-top: 1px solid var(--border); }
   .reviews { grid-template-columns: minmax(0, 1fr); }
+  .posts { grid-template-columns: minmax(0, 1fr); }
   .gbp-map { min-height: 340px; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 200px; }
   .ph--a { grid-column: 1 / -1; }
@@ -967,6 +988,32 @@ a.gbp-line:hover { color: var(--blue-300); }
           }
         }
       ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://chakibeservice.netlify.app/#blog",
+      "name": "Blog Chakib E-Service",
+      "inLanguage": "ar-DZ",
+      "url": "https://chakibeservice.netlify.app/#blog",
+      "publisher": {
+        "@id": "https://chakibeservice.netlify.app/#business"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "دليلك الشامل للإجراءات الإدارية الإلكترونية في الجزائر",
+          "url": "https://chakibeservice.netlify.app/articles/guide-demarches-administratives-en-ligne-algerie.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "التسجيل الجامعي والدراسة في فرنسا: دليل Progres و Campus France خطوة بخطوة",
+          "url": "https://chakibeservice.netlify.app/articles/guide-progres-campus-france.html",
+          "datePublished": "2026-11-14",
+          "inLanguage": "ar-DZ"
+        }
+      ]
     }
   ]
 }
@@ -1004,6 +1051,7 @@ a.gbp-line:hover { color: var(--blue-300); }
         <a href="#services">Services</a>
         <a href="#galerie">Galerie</a>
         <a href="#avis">Avis Google</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
         <div class="nav__social">
           <a class="soc-icon" href="https://www.instagram.com/chakib_e.service/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
@@ -1273,6 +1321,45 @@ a.gbp-line:hover { color: var(--blue-300); }
       </div>
     </section>
 
+    <!-- ===== Blog / Articles (Arabic guides in /articles) ===== -->
+    <section class="section section--alt" id="blog">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="dot"></span>Blog &amp; guides</p>
+          <h2>Nos guides <span class="text-gradient">pratiques</span></h2>
+          <p lang="ar" dir="rtl" class="blog-ar">مقالات ونصائح لتسهيل إجراءاتك الإدارية والرقمية في الجزائر</p>
+        </header>
+        <div class="posts" data-stagger>
+          <a class="post glass glow-card reveal" href="articles/guide-demarches-administratives-en-ligne-algerie.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H4zM9 20h6M12 16v4M8 9h8M8 12h5"/></svg>
+              <span class="post__num">01</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">دليل الخدمات الإلكترونية</span>
+              <h3>دليلك الشامل للإجراءات الإدارية الإلكترونية في الجزائر</h3>
+              <p>تعرّف على أهم الخدمات الإدارية المتاحة عبر الإنترنت في الجزائر: وثائق الحالة المدنية، بطاقة التعريف وجواز السفر البيومتريان، الدفع الإلكتروني للفواتير، والوثائق التي يجب تحضيرها مع نصائح لتجنب الأخطاء.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
+          <a class="post glass glow-card reveal" href="articles/guide-progres-campus-france.html" lang="ar" dir="rtl">
+            <div class="post__cover" aria-hidden="true">
+              <span class="post__grid"></span>
+              <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M2 9.5 12 4l10 5.5-10 5.5L2 9.5Zm4 2.2V17c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.3M22 9.5V15"/></svg>
+              <span class="post__num">02</span>
+            </div>
+            <div class="post__body">
+              <span class="post__tag">دليل الطالب</span>
+              <h3>التسجيل الجامعي والدراسة في فرنسا: دليل Progres و Campus France خطوة بخطوة</h3>
+              <p>دليل مبسّط لحاملي البكالوريا والطلبة في الجزائر: التسجيل الجامعي على منصة Progres، طلبات المنحة والإيواء والنقل، ثم إجراءات الدراسة في فرنسا عبر Campus France والوثائق المطلوبة.</p>
+              <span class="post__meta"><span>3 دقائق قراءة</span><span class="post__more">اقرأ المقال <svg><use href="#i-arrow"/></svg></span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== FAQ (mirrors the FAQPage schema) ===== -->
     <section class="section" id="faq">
       <div class="container">
@@ -1407,6 +1494,7 @@ a.gbp-line:hover { color: var(--blue-300); }
           <li><address>Cosider, Ali Mendjeli<br>El Khroub, Constantine</address></li>
           <li><a href="#avis">★ 5,0 sur Google</a></li>
           <li><a href="#faq">Questions fréquentes</a></li>
+          <li><a href="#blog">Blog &amp; guides</a></li>
         </ul>
       </div>
       <div>

@@ -11,4 +11,16 @@
     <image:image><image:loc>https://chakibeservice.netlify.app/images/vitrine-services.jpg</image:loc></image:image>
     <image:image><image:loc>https://chakibeservice.netlify.app/images/poste-de-travail.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://chakibeservice.netlify.app/articles/guide-demarches-administratives-en-ligne-algerie.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chakibeservice.netlify.app/articles/guide-progres-campus-france.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

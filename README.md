@@ -52,3 +52,9 @@ Généré en JavaScript (fin du `<script>` dans `index.html`, bloc *Digital city
 - La carte est dessinée une seule fois ; seuls la position du calque (dérive lente + léger parallaxe souris) et les véhicules bougent, via `transform`/`opacity` (composités par le GPU).
 - Moins d'éléments sur mobile, pause quand l'onglet est caché, image fixe si l'utilisateur a activé « réduire les animations ».
 - Couleurs : bleu profond et noir uniquement. Réglages : `step` (taille des îlots), nombre de véhicules (`n`), opacités dans le gabarit SVG.
+
+## Blog / Articles (arabe)
+- Section « Blog & guides » sur la page d'accueil (`#blog`) avec une carte par article.
+- Articles : `articles/guide-demarches-administratives-en-ligne-algerie.html` et `articles/guide-progres-campus-france.html` (page RTL, sommaire, barre de lecture, balisage `BlogPosting` + `BreadcrumbList`). Styles et script partagés : `assets/blog.css`, `assets/blog.js`.
+- Ajouter un article : copier un fichier de `articles/`, changer le titre, la description, le `canonical`, le JSON-LD et le contenu ; puis ajouter une carte `.post` dans `#blog`, une entrée dans le nœud `Blog` du JSON-LD de `index.html` et une URL dans `sitemap.xml`.
+- Les démarches évoluent : relire les articles chaque année (dates, plateformes officielles).
