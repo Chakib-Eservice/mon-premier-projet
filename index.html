@@ -126,6 +126,18 @@ address { font-style: normal; }
   background: radial-gradient(120% 80% at 50% 0%, transparent 0%, rgba(3,6,13,.35) 60%, rgba(3,6,13,.75) 100%),
               repeating-linear-gradient(0deg, rgba(143,176,255,.018) 0 1px, transparent 1px 4px); }
 
+/* moving perspective grid floor + sweeping scan line (transform-only, GPU-composited) */
+.bg-grid { position: fixed; left: 0; right: 0; bottom: 0; height: 46vh; z-index: -2; pointer-events: none; overflow: hidden; perspective: 420px; perspective-origin: 50% 0%;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 55%); -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 55%); opacity: .55; }
+.bg-grid__plane { position: absolute; left: -50%; right: -50%; top: 0; height: 300%; transform-origin: 50% 0%; transform: rotateX(68deg);
+  background-image: linear-gradient(rgba(47,107,255,.38) 1px, transparent 1px), linear-gradient(90deg, rgba(47,107,255,.38) 1px, transparent 1px);
+  background-size: 64px 64px; animation: grid-run 6s linear infinite; will-change: transform; }
+@keyframes grid-run { from { transform: rotateX(68deg) translateY(0); } to { transform: rotateX(68deg) translateY(64px); } }
+.bg-scan { position: fixed; left: 0; right: 0; top: 0; height: 140px; z-index: -2; pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(47,107,255,.07) 45%, rgba(143,176,255,.12) 50%, rgba(47,107,255,.07) 55%, transparent);
+  animation: scan 9s cubic-bezier(.45,0,.55,1) infinite; will-change: transform; }
+@keyframes scan { from { transform: translateY(-160px); } to { transform: translateY(100vh); } }
+
 /* scroll progress */
 .progress-bar { position: fixed; inset: 0 0 auto; height: 2px; z-index: 200; transform-origin: 0 50%; transform: scaleX(var(--sp, 0)); background: linear-gradient(90deg, var(--blue-700), var(--blue-300)); box-shadow: 0 0 12px var(--glow); }
 
@@ -962,6 +974,8 @@ a.gbp-line:hover { color: var(--blue-300); }
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   </svg>
 
+  <div class="bg-grid" aria-hidden="true"><div class="bg-grid__plane"></div></div>
+  <div class="bg-scan" aria-hidden="true"></div>
   <canvas id="bg-net" aria-hidden="true"></canvas>
   <div class="bg-veil" aria-hidden="true"></div>
   <div class="progress-bar" aria-hidden="true"></div>
@@ -1599,7 +1613,9 @@ a.gbp-line:hover { color: var(--blue-300); }
     const ctx = canvas && canvas.getContext && canvas.getContext('2d');
     if (!ctx) return;
     const LINK = 150, MOUSE_LINK = 190;
-    let w = 0, h = 0, pts = [], raf = 0, last = 0;
+    let w = 0, h = 0, pts = [], raf = 0, last = 0, lastSpawn = 0;
+    const pulses = [];
+    let maxPulses = 10;
     const mouse = { x: -1e4, y: -1e4 };
 
     const resize = () => {
@@ -1608,6 +1624,7 @@ a.gbp-line:hover { color: var(--blue-300); }
       canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       const n = Math.round(Math.min(80, Math.max(28, (w * h) / 17000)));
+      maxPulses = w < 700 ? 5 : 10;
       while (pts.length < n) {
         pts.push({ x: Math.random() * w, y: Math.random() * h,
           vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28,
@@ -1648,11 +1665,36 @@ a.gbp-line:hover { color: var(--blue-300); }
         }
       }
       for (let k = 0; k < 4; k++) {
-        ctx.strokeStyle = `rgba(47,107,255,${((k + 0.5) / 4) * 0.24})`; ctx.stroke(paths[k]);
+        ctx.strokeStyle = `rgba(47,107,255,${((k + 0.5) / 4) * 0.32})`; ctx.stroke(paths[k]);
         ctx.strokeStyle = `rgba(143,176,255,${((k + 0.5) / 4) * 0.4})`; ctx.stroke(mpaths[k]);
       }
+      // Data pulses: bright dots travelling along live links
+      if (t - lastSpawn > 260 && pulses.length < maxPulses) {
+        lastSpawn = t;
+        const a = pts[(Math.random() * pts.length) | 0];
+        let best = null, bd = LINK * LINK;
+        for (const b of pts) {
+          if (b === a) continue;
+          const dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy;
+          if (d2 < bd && d2 > 900) { bd = d2; best = b; }
+        }
+        if (best) pulses.push({ a, b: best, k: 0, v: 0.012 + Math.random() * 0.012 });
+      }
+      for (let i = pulses.length - 1; i >= 0; i--) {
+        const q = pulses[i];
+        q.k += q.v * dt;
+        const dx = q.a.x - q.b.x, dy = q.a.y - q.b.y;
+        if (q.k >= 1 || dx * dx + dy * dy > LINK * LINK) { pulses.splice(i, 1); continue; }
+        const x = q.a.x + (q.b.x - q.a.x) * q.k, y = q.a.y + (q.b.y - q.a.y) * q.k;
+        const fade = Math.sin(q.k * Math.PI);
+        ctx.fillStyle = `rgba(47,107,255,${0.25 * fade})`;
+        ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.283); ctx.fill();
+        ctx.fillStyle = `rgba(196,212,255,${0.95 * fade})`;
+        ctx.beginPath(); ctx.arc(x, y, 1.6, 0, 6.283); ctx.fill();
+      }
+
       for (const p of pts) {
-        const glow = 0.55 + 0.35 * Math.sin(t * 0.0015 + p.ph);
+        const glow = 0.6 + 0.4 * Math.sin(t * 0.0015 + p.ph);
         ctx.fillStyle = `rgba(47,107,255,${0.12 * glow})`;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 4, 0, 6.283); ctx.fill();
         ctx.fillStyle = `rgba(143,176,255,${0.75 * glow})`;
