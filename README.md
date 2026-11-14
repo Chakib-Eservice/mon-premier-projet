@@ -39,3 +39,10 @@ python3 -m http.server 8000
   - `placeId` → (optionnel) active le lien direct « Laisser un avis ».
   - Mettez aussi ce lien dans `"hasMap"` du JSON-LD.
 - Gardez exactement le même nom, adresse et téléphone sur le site, la fiche Google et les réseaux (cohérence NAP).
+
+## SEO local (avancé)
+- **JSON-LD `@graph`** dans le `<head>` : `LocalBusiness`/`InternetCafe` (adresse Cosider, Nouvelle Ville, Ali Mendjeli, téléphone +213542522033, logo, photos, zone desservie, catalogue de services), `WebSite`, `WebPage` et `FAQPage` (identique à la section FAQ visible).
+- **Meta** : description et mots-clés locaux (FR + AR), `robots`, `canonical`, `hreflang`, Open Graph et Twitter Card avec la photo de la façade, géolocalisation `DZ-25`.
+- **Fichiers** : `robots.txt` et `sitemap.xml` (avec les photos). Après la mise en ligne, soumettez `https://chakibeservice.netlify.app/sitemap.xml` dans Google Search Console.
+- **Avis clients** : la note 5,0 est affichée sur la page. Pour afficher de vrais avis, copiez-les depuis la fiche Google dans la liste `REVIEWS` (script en bas de `index.html`) : `{ name: 'Prénom N.', date: 'il y a 2 semaines', text: '…' }`. La note n'est volontairement pas balisée en `aggregateRating` (Google ignore et peut pénaliser les avis auto-déclarés d'une entreprise sur son propre site).
+- **Horaires / coordonnées GPS** : non renseignés faute d'information. À ajouter dans le JSON-LD (`openingHoursSpecification`, `geo`) dès qu'ils sont connus, à l'identique de la fiche Google.
